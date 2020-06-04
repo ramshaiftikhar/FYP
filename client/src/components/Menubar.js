@@ -1,7 +1,6 @@
 import React from "react";
 import { FaAlignRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Signup from "../pages/Signup";
 import axios from "axios";
 
 class Menubar extends React.Component {
@@ -42,9 +41,9 @@ class Menubar extends React.Component {
         id="mainNav"
       >
         <div className="container">
-          <a className="navbar-brand js-scroll-trigger" href="#page-top">
+          <Link className="navbar-brand js-scroll-trigger" to="/">
             Raabta
-          </a>
+          </Link>
           <button
             className="navbar-toggler navbar-toggler-right"
             type="button"

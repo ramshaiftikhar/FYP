@@ -1,7 +1,7 @@
 import React from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBBtn } from "mdbreact";
 import axios from "axios";
-import { Redirect } from "react-router-dom";
+import { Redirect, withRouter } from "react-router-dom";
 
 class StartFundraiser extends React.Component {
   constructor(props) {
@@ -168,4 +168,4 @@ class StartFundraiser extends React.Component {
   }
 }
 
-export default StartFundraiser;
+export default withRouter(StartFundraiser);
