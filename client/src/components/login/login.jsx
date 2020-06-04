@@ -38,6 +38,7 @@ export class Login extends React.Component {
         console.log("login response: ");
         console.log(response);
         if (response.status === 200) {
+          alert("Login Successful!");
           // update the state to redirect to home
           this.setState({
             redirectTo: "/"

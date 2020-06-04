@@ -35,6 +35,7 @@ export class Register extends React.Component {
       })
       .then(response => {
         if (!response.data.errmsg) {
+          alert("Sign up Successful!");
           this.setState({
             redirectTo: "/"
           });
