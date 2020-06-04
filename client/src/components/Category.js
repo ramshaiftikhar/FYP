@@ -7,8 +7,8 @@ import {
   MDBContainer,
   MDBRow
 } from "mdbreact";
-import Menubar from "./Menubar";
 import axios from "axios";
+import { withRouter } from "react-router-dom";
 import "./Category.css";
 
 class Category extends Component {
@@ -135,4 +135,4 @@ class Category extends Component {
   }
 }
 
-export default Category;
+export default withRouter(Category);

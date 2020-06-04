@@ -50,9 +50,6 @@ class App extends React.Component {
       <Router>
         <div className="App">
           <Menubar updateUser={this.updateUser} loggedIn={loggedIn} />
-
-          {/* Header section*/}
-
           <Switch>
             <Route exact path="/" component={Landing} />
             <Route
@@ -66,7 +63,7 @@ class App extends React.Component {
                 render={() => <Signup updateUser={this.updateUser} />}
               />
             )}
-            <Route path="/category" component={Category} />
+            <Route exact path="/category" component={Category} />
           </Switch>
         </div>
       </Router>

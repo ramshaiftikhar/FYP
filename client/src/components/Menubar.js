@@ -29,7 +29,6 @@ class Menubar extends React.Component {
 
   render() {
     const loggedIn = this.props.loggedIn;
-
     return (
       <nav
         className="navbar navbar-expand-lg navbar-dark fixed-top"
@@ -58,29 +57,59 @@ class Menubar extends React.Component {
           <div className="collapse navbar-collapse" id="navbarResponsive">
             <ul className="navbar-nav text-uppercase ml-auto">
               <li className="nav-item">
-                <a className="nav-link js-scroll-trigger" href="#aboutus">
-                  About us
-                </a>
+                {window.location.pathname === "/" ? (
+                  <Link className="nav-link js-scroll-trigger" to="/">
+                    About us
+                  </Link>
+                ) : (
+                  <a className="nav-link js-scroll-trigger" href="#aboutus">
+                    About us
+                  </a>
+                )}
               </li>
               <li className="nav-item">
-                <a className="nav-link js-scroll-trigger" href="#started">
-                  Get Started
-                </a>
+                {window.location.pathname === "/" ? (
+                  <Link className="nav-link js-scroll-trigger" to="/">
+                    About us
+                  </Link>
+                ) : (
+                  <a className="nav-link js-scroll-trigger" href="#started">
+                    Get Started
+                  </a>
+                )}
               </li>
               <li className="nav-item">
-                <a className="nav-link js-scroll-trigger" href="#categories">
-                  Categories
-                </a>
+                {window.location.pathname === "/" ? (
+                  <Link className="nav-link js-scroll-trigger" to="/">
+                    Categories
+                  </Link>
+                ) : (
+                  <a className="nav-link js-scroll-trigger" href="#categories">
+                    Categories
+                  </a>
+                )}
               </li>
               <li className="nav-item">
-                <a className="nav-link js-scroll-trigger" href="#team">
-                  Team
-                </a>
+                {window.location.pathname === "/" ? (
+                  <Link className="nav-link js-scroll-trigger" to="/">
+                    Team
+                  </Link>
+                ) : (
+                  <a className="nav-link js-scroll-trigger" href="#team">
+                    Team
+                  </a>
+                )}
               </li>
               <li className="nav-item">
-                <a className="nav-link js-scroll-trigger" href="#contact">
-                  Contact
-                </a>
+                {window.location.pathname === "/" ? (
+                  <Link className="nav-link js-scroll-trigger" to="/">
+                    Contact
+                  </Link>
+                ) : (
+                  <a className="nav-link js-scroll-trigger" href="#contact">
+                    Contact
+                  </a>
+                )}
               </li>
 
               <li className="nav-item">
