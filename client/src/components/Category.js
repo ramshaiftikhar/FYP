@@ -40,9 +40,25 @@ class Category extends Component {
     }));
   };
   CategoryCard = (post, toggleCollapse, collapseID) => {
+    console.log(post.image && post.image.substring(post.image.search("\\img")));
     return (
       <MDBCol md={4}>
         <div className="card-wrapper">
+          {post.image && (
+            <div style={{marginBottom: 10}}>
+              <img
+                  style={{borderRadius: 10}}
+                  src={
+                    "/" +
+                    post.image
+                        .substring(post.image.search("\\img"))
+                        .replace("\\", "/")
+                  }
+                  alt=""
+                  width={80}
+              />
+            </div>
+          )}
           <div className="name">{post.name}</div>
 
           <MDBBtn
@@ -68,7 +84,7 @@ class Category extends Component {
                 <b>Phone:</b> {post.phone}
               </div>
               <div>
-                  <b>Date Created:</b> {post.dateCreated}
+                <b>Date Created:</b> {post.dateCreated}
               </div>
             </p>
           </MDBCollapse>

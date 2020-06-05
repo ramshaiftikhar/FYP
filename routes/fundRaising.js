@@ -6,14 +6,17 @@ const fs = require("fs");
 
 const storage = multer.diskStorage({
   destination: function(req, file, cb) {
-    cb(null, "./uploads/");
+    cb(null, "./client/public/img/");
   },
   filename: function(req, file, cb) {
-    cb(null, new Date().toISOString() + file.originalname);
+    const now = new Date().toISOString();
+    const date = now.replace(/:/g, "-");
+    cb(null, date);
   }
 });
 
 const upload = multer({ storage: storage });
+
 router.get("/getFundRaisingPosts/", (req, res) => {
   FundRaiser.find({}, (err, fundRaisePosts) => {
     if (err) {
@@ -23,11 +26,10 @@ router.get("/getFundRaisingPosts/", (req, res) => {
     }
   });
 });
-//, upload.single("picture")
-router.post("/addFundRaisingPost/", (req, res) => {
+router.post("/addFundRaisingPost/", upload.single("file"), (req, res) => {
   console.log("Data received", req.body);
   let post = req.body;
-  // post.image = req.file.path;
+  post.image = req.file.path;
 
   FundRaiser.create(post, (err, fundRaisePost) => {
     if (err) {

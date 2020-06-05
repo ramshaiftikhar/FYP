@@ -51,24 +51,19 @@ class StartFundraiser extends React.Component {
         (parseInt(dateCreated.getMonth()) + 1).toString() +
         "-" +
         dateCreated.getFullYear();
-      // formData.append("file", image);
-      // formData.append("name", name);
-      // formData.append("email", email);
-      // formData.append("phone", phone);
-      // formData.append("categoryName", categoryName);
-      // formData.append("amount", amount);
-      // formData.append("description", description);
-      // formData.append("dateCreated", dateCreated);
-
+      formData.append("file", image);
+      formData.append("name", name);
+      formData.append("email", email);
+      formData.append("phone", phone);
+      formData.append("categoryName", categoryName);
+      formData.append("amount", amount);
+      formData.append("description", description);
+      formData.append("dateCreated", dateCreated);
       axios
-        .post("/addFundRaisingPost/", {
-          name,
-          email,
-          phone,
-          categoryName,
-          amount,
-          description,
-          dateCreated
+        .post("/addFundRaisingPost/", formData, {
+          headers: {
+            "Content-Type": "multipart/form-data"
+          }
         })
         .then(response => {
           console.log("response", response.data);
@@ -182,9 +177,9 @@ class StartFundraiser extends React.Component {
                 onChange={this.handleChange}
                 required
               />
-              {/*<div style={{ marginTop: 30 }}>*/}
-              {/*  <input type="file" onChange={this.handleChangeImage} />*/}
-              {/*</div>*/}
+              <div style={{ marginTop: 30 }}>
+                <input type="file" onChange={this.handleChangeImage} />
+              </div>
 
               <div className="text-center mt-4">
                 <MDBBtn
