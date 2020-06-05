@@ -44,21 +44,14 @@ class Category extends Component {
     return (
       <MDBCol md={4}>
         <div className="card-wrapper">
-          {post.image && (
-            <div style={{marginBottom: 10}}>
-              <img
-                  style={{borderRadius: 10}}
-                  src={
-                    "/" +
-                    post.image
-                        .substring(post.image.search("\\img"))
-                        .replace("\\", "/")
-                  }
-                  alt=""
-                  width={80}
-              />
-            </div>
-          )}
+          <div style={{ marginBottom: 10 }}>
+            <img
+              style={{ borderRadius: 10 }}
+              src={post.image}
+              alt=""
+              width={80}
+            />
+          </div>
           <div className="name">{post.name}</div>
 
           <MDBBtn

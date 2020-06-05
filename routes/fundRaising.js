@@ -2,18 +2,21 @@ const express = require("express");
 const router = express.Router();
 const FundRaiser = require("../database/models/AppFundraiser");
 const multer = require("multer");
-const fs = require("fs");
+const cloudinary = require('cloudinary').v2;
+const { CloudinaryStorage } = require('multer-storage-cloudinary');
 
-const storage = multer.diskStorage({
-  destination: function(req, file, cb) {
-    cb(null, "./client/public/img/");
+const storage = new CloudinaryStorage({
+  cloudinary: cloudinary,
+  params: {
+    folder: 'raabta-folder',
+    format: async (req, file) => 'png', // supports promises as well
+    public_id: (req, file) => 'computed-filename-using-request',
+    api_key: "634276184112865",
+    api_secret: "MUPGN_rhj4zbapb5XZ7b45VQD6U",
+    cloud_name: "honeycombcloud"
   },
-  filename: function(req, file, cb) {
-    const now = new Date().toISOString();
-    const date = now.replace(/:/g, "-");
-    cb(null, date + file.originalname);
-  }
 });
+
 
 const upload = multer({ storage: storage });
 
