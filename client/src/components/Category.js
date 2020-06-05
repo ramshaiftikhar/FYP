@@ -109,6 +109,9 @@ class Category extends Component {
                 />
               </MDBCol>
             </div>
+            <div style={{ fontSize: 32, textAlign: "center" }}>
+              Verified
+            </div>
             <MDBContainer>
               <MDBRow>
                 {fundRaisingPosts &&
