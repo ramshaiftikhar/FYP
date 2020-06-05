@@ -12,7 +12,8 @@ class StartFundraiser extends React.Component {
       phone: "",
       categoryName: "",
       amount: "",
-      description: ""
+      description: "",
+      image: null
     };
   }
 
@@ -20,6 +21,11 @@ class StartFundraiser extends React.Component {
     console.log(event.target.value);
     this.setState({
       [event.target.name]: event.target.value
+    });
+  };
+  handleChangeImage = e => {
+    this.setState({
+      image: e.target.files[0]
     });
   };
   handleSubmit = event => {
@@ -30,25 +36,49 @@ class StartFundraiser extends React.Component {
       phone,
       categoryName,
       amount,
-      description
+      description,
+      image
     } = this.state;
-    axios
-      .post("/addFundRaisingPost/", {
-        name,
-        email,
-        phone,
-        categoryName,
-        amount,
-        description
-      })
-      .then(response => {
-        console.log("response", response.data);
-        alert("Submitted successfully");
-        this.props.history.push("/");
-      })
-      .catch(error => {
-        console.log(error);
-      });
+    console.log(image);
+    if (!name || !email || !phone || !categoryName || !description) {
+      alert("Please fill all the fields");
+    } else {
+      const formData = new FormData();
+      let dateCreated = new Date();
+      dateCreated =
+        dateCreated.getDate() +
+        "-" +
+        (parseInt(dateCreated.getMonth()) + 1).toString() +
+        "-" +
+        dateCreated.getFullYear();
+      // formData.append("file", image);
+      // formData.append("name", name);
+      // formData.append("email", email);
+      // formData.append("phone", phone);
+      // formData.append("categoryName", categoryName);
+      // formData.append("amount", amount);
+      // formData.append("description", description);
+      // formData.append("dateCreated", dateCreated);
+
+      axios
+        .post("/addFundRaisingPost/", {
+          name,
+          email,
+          phone,
+          categoryName,
+          amount,
+          description,
+          dateCreated
+        })
+        .then(response => {
+          console.log("response", response.data);
+          alert("Submitted successfully");
+          this.props.history.push("/");
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    }
   };
   render() {
     const {
@@ -78,6 +108,7 @@ class StartFundraiser extends React.Component {
                 name="name"
                 value={name}
                 onChange={this.handleChange}
+                required
               />
               <br />
               <label htmlFor="email" className="grey-text">
@@ -90,6 +121,7 @@ class StartFundraiser extends React.Component {
                 name="email"
                 value={email}
                 onChange={this.handleChange}
+                required
               />
               <br />
               <label htmlFor="categoryName" className="grey-text">
@@ -101,6 +133,7 @@ class StartFundraiser extends React.Component {
                 value={categoryName}
                 style={{ marginBottom: 30 }}
                 onChange={e => this.setState({ categoryName: e.target.value })}
+                required
               >
                 <option>Choose your option</option>
                 <option value="Medical">Medical</option>
@@ -147,7 +180,11 @@ class StartFundraiser extends React.Component {
                 name="phone"
                 value={phone}
                 onChange={this.handleChange}
+                required
               />
+              {/*<div style={{ marginTop: 30 }}>*/}
+              {/*  <input type="file" onChange={this.handleChangeImage} />*/}
+              {/*</div>*/}
 
               <div className="text-center mt-4">
                 <MDBBtn

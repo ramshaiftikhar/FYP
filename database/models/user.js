@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const bcrypt = require('bcryptjs')
+const bcrypt = require("bcryptjs");
 mongoose.promise = Promise;
 
 /*
@@ -16,40 +16,36 @@ mongoose.Promise === require('bluebird'); // true in 5.x, false in 4.x
 On a related note, since mpromise is no longer supported, mongoose.Promise now contains the actual promise constructor. In other words, mongoose.Promise is no longer a compatibility layer that reconciles mpromise and ES6 promises, it is strictly equal to the promise constructor.
 */
 
-
 const userSchema = new Schema({
-
-	email: { type: String, unique: false, required: false },
-	password: { type: String, unique: false, required: false }
-
-})
+  email: { type: String, unique: false, required: false },
+  password: { type: String, unique: false, required: false }
+});
 
 // Defining Schema methods
 userSchema.methods = {
-	checkPassword: function (inputPassword) {
-		return bcrypt.compareSync(inputPassword, this.password)
-	},
-	hashPassword: plainTextPassword => {
-		return bcrypt.hashSync(plainTextPassword, 10)
-	}
-}
-
+  checkPassword: function(inputPassword) {
+    return bcrypt.compareSync(inputPassword, this.password);
+  },
+  hashPassword: plainTextPassword => {
+    return bcrypt.hashSync(plainTextPassword, 10);
+  }
+};
 
 /* The hashPassword method does just what it says, it hashes the password. The first argument is the password to hash, and the second parameter is the salt length to generate (integer). */
 
 // Defining hooks for pre-saving
-userSchema.pre('save', function (next) {
-	if (!this.password) {
-		console.log('models/user.js =======NO PASSWORD PROVIDED=======')
-		next()
-	} else {
-		console.log('models/user.js hashPassword in pre save');
-		this.password = this.hashPassword(this.password)
-		next()
-	}
-})
+userSchema.pre("save", function(next) {
+  if (!this.password) {
+    console.log("models/user.js =======NO PASSWORD PROVIDED=======");
+    next();
+  } else {
+    console.log("models/user.js hashPassword in pre save");
+    this.password = this.hashPassword(this.password);
+    next();
+  }
+});
 
-const User = mongoose.model('User', userSchema)
+const User = mongoose.model("User", userSchema);
 module.exports = User;
 
 /* “pre” and “post” hooks  - They tie particular functions to particular lifecycle and query events. This middleware is defined on the schema level and can modify the query or the document itself as it is executed.

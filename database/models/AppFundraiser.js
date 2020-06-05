@@ -8,7 +8,8 @@ const fundRaiserSchema = new Schema({
   categoryName: String,
   amount: Number,
   description: String,
-  phone: String
+  phone: String,
+  dateCreated: String
 });
 const fundRaiser = mongoose.model("FundRaiser", fundRaiserSchema);
 module.exports = fundRaiser;

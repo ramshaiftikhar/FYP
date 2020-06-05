@@ -6,7 +6,6 @@ const dbConnection = require("./database");
 const path = require("path");
 
 const MongoStore = require("connect-mongo")(session);
-
 const passport = require("./passport");
 const app = express();
 const PORT = process.env.PORT || 8080; // Step 1
@@ -16,6 +15,8 @@ const fundRaising = require("./routes/fundRaising");
 app.use(express.urlencoded());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json()); // for parsing application/json
+app.use(morgan('dev'));
+
 
 // express-session management
 app.use(

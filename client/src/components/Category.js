@@ -28,7 +28,6 @@ class Category extends Component {
       .get("/getFundRaisingPosts/")
       .then(res => {
         console.log("Res is", res.data.fundRaisePosts);
-
         this.setState({ fundRaisingPosts: res.data.fundRaisePosts });
       })
       .catch(err => {
@@ -67,6 +66,9 @@ class Category extends Component {
               </div>
               <div>
                 <b>Phone:</b> {post.phone}
+              </div>
+              <div>
+                  <b>Date Created:</b> {post.dateCreated}
               </div>
             </p>
           </MDBCollapse>

@@ -21,7 +21,7 @@ class Team extends React.Component{
       <div className="row">
         <div className="col-sm-4">
           <div className="team-member">
-            <img className="mx-auto rounded-circle" src="img/team/1.jpg" alt=""/>
+            <img className="mx-auto rounded-circle" src="/img/team/ramsha.jpg" alt=""/>
             <h4>Ramsha Iftikhar</h4>
             <p className="section-subheading text-muted">Lead Designer</p>
             <ul className="list-inline social-buttons">
@@ -45,7 +45,7 @@ class Team extends React.Component{
         </div>
         <div className="col-sm-4">
           <div className="team-member">
-            <img className="mx-auto rounded-circle" src="img/team/2.jpg" alt=""/>
+            <img className="mx-auto rounded-circle" src="/img/team/ahsan.jpg" alt=""/>
             <h4>Muhammad Ahsan</h4>
             <p className=" section-subheading text-muted">Lead Marketer</p>
             <ul className="list-inline social-buttons">
@@ -69,7 +69,7 @@ class Team extends React.Component{
         </div>
         <div className="col-sm-4">
           <div className="team-member">
-            <img className="mx-auto rounded-circle" src="img/team/3.jpg" alt=""/>
+            <img className="mx-auto rounded-circle" src="/img/team/junaid.jpg" alt=""/>
             <h4>Junaid Khalid</h4>
             <p className="section-subheading text-muted">Lead Developer</p>
             <ul className="list-inline social-buttons">
@@ -100,7 +100,7 @@ class Team extends React.Component{
     </div>
   </section>
 
-            
+
 
         );
     }

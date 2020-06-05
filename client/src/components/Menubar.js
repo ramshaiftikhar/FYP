@@ -29,6 +29,7 @@ class Menubar extends React.Component {
 
   render() {
     const loggedIn = this.props.loggedIn;
+    console.log(window.location.pathname)
     return (
       <nav
         className="navbar navbar-expand-lg navbar-dark fixed-top"
@@ -68,7 +69,7 @@ class Menubar extends React.Component {
                 )}
               </li>
               <li className="nav-item">
-                {window.location.pathname === "/" ? (
+                {window.location.pathname !== "/" ? (
                   <Link className="nav-link js-scroll-trigger" to="/">
                     About us
                   </Link>
@@ -79,7 +80,7 @@ class Menubar extends React.Component {
                 )}
               </li>
               <li className="nav-item">
-                {window.location.pathname === "/" ? (
+                {window.location.pathname !== "/" ? (
                   <Link className="nav-link js-scroll-trigger" to="/">
                     Categories
                   </Link>
@@ -90,7 +91,7 @@ class Menubar extends React.Component {
                 )}
               </li>
               <li className="nav-item">
-                {window.location.pathname === "/" ? (
+                {window.location.pathname !== "/" ? (
                   <Link className="nav-link js-scroll-trigger" to="/">
                     Team
                   </Link>
@@ -101,7 +102,7 @@ class Menubar extends React.Component {
                 )}
               </li>
               <li className="nav-item">
-                {window.location.pathname === "/" ? (
+                {window.location.pathname !== "/" ? (
                   <Link className="nav-link js-scroll-trigger" to="/">
                     Contact
                   </Link>
