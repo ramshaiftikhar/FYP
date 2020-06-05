@@ -40,7 +40,6 @@ class Category extends Component {
     }));
   };
   CategoryCard = (post, toggleCollapse, collapseID) => {
-    console.log(post.image && post.image.substring(post.image.search("\\img")));
     return (
       <MDBCol md={4}>
         <div className="card-wrapper">
@@ -89,6 +88,10 @@ class Category extends Component {
   render() {
     const { loading, fundRaisingPosts, searchVal } = this.state;
     const { category } = this.props.location.state;
+    const sorted =
+      fundRaisingPosts &&
+      fundRaisingPosts.sort((a, b) => new Date(b.dateString) - new Date(a.dateString));
+    console.log("Sorrwd", sorted);
     return (
       <div>
         {loading ? (
@@ -109,13 +112,11 @@ class Category extends Component {
                 />
               </MDBCol>
             </div>
-            <div style={{ fontSize: 32, textAlign: "center" }}>
-              Verified
-            </div>
+            <div style={{ fontSize: 32, textAlign: "center" }}>Verified</div>
             <MDBContainer>
               <MDBRow>
-                {fundRaisingPosts &&
-                  fundRaisingPosts.map(post => {
+                {sorted &&
+                  sorted.map(post => {
                     if (searchVal !== "") {
                       if (
                         post.name.toLowerCase().includes(searchVal) &&
