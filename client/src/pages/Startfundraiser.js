@@ -131,13 +131,15 @@ class StartFundraiser extends React.Component {
                 required
               >
                 <option>Choose your option</option>
-                <option value="Medical">Medical</option>
+                <option value="Misc">Misc</option>
+                <option value="Food">Food</option>
+                <option value="Cloth">Cloth</option>
                 <option value="Education">Education</option>
-                <option value="Loans">Loans</option>
-                <option value="Miscellaneous">Miscellaneous</option>
-                <option value="Basic Needs">Basic Needs</option>
-                <option value="Pets & Animals">Pets & Animals</option>
-                <option value="Miscellaneous">Miscellaneous</option>
+                <option value="Disaster Relief">Disaster Relief</option>
+                <option value="COVID">COVID</option>
+                <option value="Bills">Bills</option>
+                <option value="Environment">Environment</option>
+                <option value="Animals/Pets">Animals/Pets</option>
               </select>
               <br />
               <label htmlFor="amount" className="grey-text">

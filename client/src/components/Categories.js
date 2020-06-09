@@ -27,13 +27,13 @@ export default Categories;
 
 let categories = [
   {
-    title: "Basic Needs",
-    apiRoute: "basic_needs",
+    title: "Cloth",
+    apiRoute: "cloth",
     icon: "home"
   },
   {
-    title: "Medical",
-    apiRoute: "basic_needs",
+    title: "Disaster Relief",
+    apiRoute: "disaster_relief",
     icon: "wheelchair"
   },
   {
@@ -47,14 +47,24 @@ let categories = [
     icon: "paw"
   },
   {
-    title: "Loans",
-    apiRoute: "basic_needs",
-    icon: "money"
+    title: "COVID",
+    apiRoute: "covid",
+    icon: "plus"
+  },
+  {
+    title: "Food",
+    apiRoute: "food",
+    icon: "cutlery"
   },
   {
     title: "Bills",
     apiRoute: "basic_needs",
     icon: "credit-card"
+  },
+  {
+    title: "Environment",
+    apiRoute: "environment",
+    icon: "globe"
   },
   {
     title: "Miscellaneous",

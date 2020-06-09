@@ -3,19 +3,6 @@ const Schema = mongoose.Schema;
 const bcrypt = require("bcryptjs");
 mongoose.promise = Promise;
 
-/*
-Mongoose 5 uses Node.js' native promises by default.
-
-mongoose.Promise === global.Promise; // true
-
-The mongoose.Promise property is still supported. You can still make mongoose always return bluebird promises with the below code.
-
-mongoose.Promise = require('bluebird');
-mongoose.Promise === require('bluebird'); // true in 5.x, false in 4.x
-
-On a related note, since mpromise is no longer supported, mongoose.Promise now contains the actual promise constructor. In other words, mongoose.Promise is no longer a compatibility layer that reconciles mpromise and ES6 promises, it is strictly equal to the promise constructor.
-*/
-
 const userSchema = new Schema({
   email: { type: String, unique: false, required: false },
   password: { type: String, unique: false, required: false }

@@ -4,7 +4,6 @@ const morgan = require("morgan");
 const session = require("express-session");
 const dbConnection = require("./database");
 const path = require("path");
-
 const MongoStore = require("connect-mongo")(session);
 const passport = require("./passport");
 const app = express();
@@ -12,11 +11,13 @@ const PORT = process.env.PORT || 8080; // Step 1
 
 const user = require("./routes/user");
 const fundRaising = require("./routes/fundRaising");
+const tweets = require("./routes/tweets");
+const reddits = require("./routes/reddits");
+const fbPosts = require("./routes/fbPosts");
 app.use(express.urlencoded());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json()); // for parsing application/json
-app.use(morgan('dev'));
-
+app.use(morgan("dev"));
 
 // express-session management
 app.use(
@@ -31,6 +32,9 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use("/user", user);
 app.use("/", fundRaising);
+app.use("/", tweets);
+app.use("/", reddits);
+app.use("/", fbPosts);
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
