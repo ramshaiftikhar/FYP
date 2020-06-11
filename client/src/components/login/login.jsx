@@ -45,7 +45,9 @@ export class Login extends React.Component {
           });
           this.props.updateUser({
             loggedIn: true,
-            email: response.data.email
+            email: response.data.email,
+
+            
           });
         }
       })

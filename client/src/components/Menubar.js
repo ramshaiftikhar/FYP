@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useRef } from "react";
 import { FaAlignRight } from "react-icons/fa";
+import Scroll, { Element, scroller } from 'react-scroll';
 import { Link } from "react-router-dom";
 import axios from "axios";
 
+
 class Menubar extends React.Component {
+ 
   state = { isOpen: false };
   handleToggle = () => {
     this.setState({ isOpen: !this.state.isOpen });
@@ -27,24 +30,52 @@ class Menubar extends React.Component {
       });
   };
 
+ 
+
+  scrollToPlace = (e,place) => {
+    e.preventDefault();
+    console.log('working');
+    scroller.scrollTo(place, {
+        duration: 1500,
+        smooth: true,
+      });
+};
+
+
+  
+
   render() {
+ 
     const loggedIn = this.props.loggedIn;
     console.log(window.location.pathname)
     return (
       <nav
         className="navbar navbar-expand-lg navbar-dark fixed-top"
         style={{
-          background: "#3d210a",
+          background: "black",
           height: "80px",
           boxShadow: "0 0 20px -5px"
         }}
         id="mainNav"
+
       >
+        
+       
+        
+       
         <div className="container">
-          <Link className="navbar-brand js-scroll-trigger" to="/">
+    
+         
+          <p className="navbar-brand js-scroll-trigger">
+
             Raabta
-          </Link>
+            
+          </p>
+          
+
+          
           <button
+          
             className="navbar-toggler navbar-toggler-right"
             type="button"
             data-target="#navbarResponsive"
@@ -55,11 +86,17 @@ class Menubar extends React.Component {
           >
             <FaAlignRight className="nav-icon"></FaAlignRight>
           </button>
+
+          
+          
           <div className="collapse navbar-collapse" id="navbarResponsive">
             <ul className="navbar-nav text-uppercase ml-auto">
-              <li className="nav-item">
-                {window.location.pathname === "/" ? (
-                  <Link className="nav-link js-scroll-trigger" to="/">
+              <li className="nav-item" onClick={ (e) => this.scrollToPlace(e, "about-element") }>
+                {window.location.pathname !== "/" ? (
+                  <Link className="nav-link js-scroll-trigger" 
+                  to="/"
+                  >
+                  >
                     About us
                   </Link>
                 ) : (
@@ -68,10 +105,10 @@ class Menubar extends React.Component {
                   </a>
                 )}
               </li>
-              <li className="nav-item">
+              <li className="nav-item"  onClick={ (e) => this.scrollToPlace(e, "getstarted-element") }>
                 {window.location.pathname !== "/" ? (
                   <Link className="nav-link js-scroll-trigger" to="/">
-                    About us
+                   Get started
                   </Link>
                 ) : (
                   <a className="nav-link js-scroll-trigger" href="#started">
@@ -79,7 +116,7 @@ class Menubar extends React.Component {
                   </a>
                 )}
               </li>
-              <li className="nav-item">
+              <li className="nav-item" onClick={ (e) => this.scrollToPlace(e, "categories-element")} >
                 {window.location.pathname !== "/" ? (
                   <Link className="nav-link js-scroll-trigger" to="/">
                     Categories
@@ -90,7 +127,7 @@ class Menubar extends React.Component {
                   </a>
                 )}
               </li>
-              <li className="nav-item">
+              <li className="nav-item"  onClick={ (e) => this.scrollToPlace(e, "team-element") } >
                 {window.location.pathname !== "/" ? (
                   <Link className="nav-link js-scroll-trigger" to="/">
                     Team
@@ -101,7 +138,7 @@ class Menubar extends React.Component {
                   </a>
                 )}
               </li>
-              <li className="nav-item">
+              <li className="nav-item"  onClick={ (e) => this.scrollToPlace(e, "contact-element") } >
                 {window.location.pathname !== "/" ? (
                   <Link className="nav-link js-scroll-trigger" to="/">
                     Contact
@@ -124,7 +161,7 @@ class Menubar extends React.Component {
                   </Link>
                 ) : (
                   <Link className="nav-link js-scroll-trigger" to="/signup">
-                    Login / Register
+                    Login
                   </Link>
                 )}
               </li>

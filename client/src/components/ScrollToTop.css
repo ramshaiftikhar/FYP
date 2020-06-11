@@ -1,0 +1,27 @@
+.scrollup {
+	background-color:#ffffff;
+    cursor: pointer;
+    z-index: 2;
+    position: fixed;
+    right: 30px;
+    bottom: 130px;
+    text-align: center;
+    font-size: 0;
+    border: 2px solid;
+    color:#fed136;
+    font-size: 20px;
+    opacity: 0.8;
+    height: 40px;
+    width: 40px;
+}
+
+.scrollup:hover{
+	border: 2px solid;
+    opacity: 1;
+    color:#e1ad01;
+}
+
+.scrollup i{
+	line-height:35px;
+}
+

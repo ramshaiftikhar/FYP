@@ -7,18 +7,23 @@ import Category from "./components/Category";
 import axios from "axios";
 import Menubar from "./components/Menubar";
 import Header from "./components/Header";
+import About from './components/About';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       loggedIn: false,
-      email: null
+      email: null,
+      username: '' 
     };
     this.getUser = this.getUser.bind(this);
     this.componentDidMount = this.componentDidMount.bind(this);
     this.updateUser = this.updateUser.bind(this);
   }
+
+
+
   componentDidMount() {
     this.getUser();
   }
@@ -33,7 +38,8 @@ class App extends React.Component {
       if (response.data.user) {
         this.setState({
           loggedIn: true,
-          email: response.data.user.email
+          email: response.data.user.email,
+         
         });
       } else {
         this.setState({
@@ -52,6 +58,9 @@ class App extends React.Component {
           <Menubar updateUser={this.updateUser} loggedIn={loggedIn} />
           <Switch>
             <Route exact path="/" component={Landing} />
+            <Route exact path="/aboutus" component={About} />
+            
+
             <Route
               exact
               path="/startfundraiser"

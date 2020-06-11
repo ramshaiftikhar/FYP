@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-router-dom';
-import Startedmodal from './Startedmodal';
+//import Startedmodal from './Startedmodal';
+import Scroll, { Element, scroller } from 'react-scroll';
 
 
 class Getstarted extends React.Component{
@@ -11,14 +12,14 @@ class Getstarted extends React.Component{
         const startedLinks = [
             {
               title: 'Help people in need',
-              caption: 'Provide direct support to an individual, family or community by paying medical expenses or offering financial aid',
-              source: '/img/1.jpeg'
+              caption: 'Provide direct support to an individual, family or community by paying for their meals, clothes',
+              source: '/img/food.jpg'
         
             },
             {
               title: 'Take action in an emergency',
               caption: 'Raise funds in response to a natural disaster or humanitarian crisis. Make a difference in minutes.',
-              source: '/img/2.jpeg'
+              source: '/img/flood.jpg'
             },
             {
               title: 'Take part in a charity event',
@@ -37,7 +38,7 @@ class Getstarted extends React.Component{
 
         return (
           
-        
+          <Element name="getstarted-element">
 
             <section className="bg-light page-section" id="started">
                 <div className="container">
@@ -82,6 +83,7 @@ class Getstarted extends React.Component{
                 </div>
       
             </section>
+            </Element>
 
            
 

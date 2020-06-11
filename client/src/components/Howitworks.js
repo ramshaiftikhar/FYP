@@ -1,12 +1,19 @@
 import React from 'react';
-
-
+import {
+    MDBInput,
+    MDBCol,
+    MDBBtn,
+    MDBCollapse,
+    MDBContainer,
+    MDBRow
+  } from "mdbreact";
 class Howitworks extends React.Component{
 
 
     render(){
 
         return (
+            
 
             <div id="how-it-works" class="clearfix">
             <div className="container colorA2">
@@ -19,7 +26,7 @@ class Howitworks extends React.Component{
                     <div className="row how-it-works-div">
                     <div className="how-it-works-content clearfix">
                         <div className="item-image col-6">
-                            <img src="img/signup.png"/>
+                            <img src="img/sign-up.png"/>
                         </div>
                         
                         <div className="item-content col-6">
@@ -38,7 +45,7 @@ class Howitworks extends React.Component{
                         </div>
                     
                         <div className="item-image col-6">
-                            <img src="img/search.png"/>
+                            <img src="img/seo.png"/>
                         </div>
     
                     </div>
@@ -47,7 +54,7 @@ class Howitworks extends React.Component{
                     <div className="row how-it-works-div">
                     <div className="how-it-works-content clearfix">
                         <div className="item-image col-6">
-                            <img src="img/select.png"/>
+                            <img src="img/donation.png"/>
                         </div>
                         
                         <div className="item-content col-6">
@@ -66,7 +73,7 @@ class Howitworks extends React.Component{
                         </div>
                     
                         <div className="item-image col-6">
-                            <img src="img/fundraiser.png"/>
+                            <img src="img/fundraising.png"/>
                         </div>
                     </div>
                     </div>

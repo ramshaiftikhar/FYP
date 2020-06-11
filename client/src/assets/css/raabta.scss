@@ -127,7 +127,7 @@ body {
   }
 
   #mainNav {
-    background-color: #212529;
+    background-color: black;
   }
 
   #mainNav .navbar-toggler {
@@ -143,7 +143,8 @@ body {
 
   #mainNav .navbar-brand {
     color: #fed136;
-    font-family: 'Kaushan Script', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    font-family: 'Kaushan Scrit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+   
   }
 
   #mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
@@ -151,20 +152,54 @@ body {
   }
 
   #mainNav .navbar-nav .nav-item .nav-link {
-    font-size: 90%;
+    font-size: 14px;
     font-weight: 400;
     padding: 0.75em 0;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     color: white;
     font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   }
 
   #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
     color: #fed136;
+   
+  }
+
+  p.navbar-brand.js-scroll-trigger{
+    font-family: 'Josefin Sans';
+    font-weight: 800;
+    font-size: 20px;
+    text-align: center ;
+    padding-top: 12px;
+
+
+  }
+
+  .logo-div{
+    overflow: auto;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 600px;
   }
 
 
+  .logo-image{
+    display: inline;
+    height:auto;
+    width:8%;
+    animation:logo-rotate 5s infinite ease ;
+  }
 
+  @keyframes logo-rotate{
+    from{transform:rotate(0deg)}
+    to{transform:rotate(360deg)}
+  }
+
+ 
+ .logo-div{
+   display:inline- block;
+ }
 
   @media (min-width: 992px) {
     #mainNav {
@@ -175,8 +210,11 @@ body {
       background-color: transparent;
     }
     #mainNav .navbar-brand {
-      font-size: 1.75em;
+      
+      font-family: 'PT Sans';
+      font-size: 2.5em;
       transition: all 0.3s;
+      float:left;
     }
     #mainNav .navbar-nav .nav-item .nav-link {
       padding: 1.1em 1em !important;
@@ -184,7 +222,7 @@ body {
     #mainNav.navbar-shrink {
       padding-top: 0;
       padding-bottom: 0;
-      background-color: #212529;
+      background-color: #000000;
     }
     #mainNav.navbar-shrink .navbar-brand {
       font-size: 1.25em;
@@ -204,7 +242,17 @@ body {
     background-attachment: scroll;
     background-position: center center;
     background-size: cover;
+
   }
+
+  
+
+
+
+
+
+
+  
 
   header.masthead .intro-text {
     padding-top: 150px;
@@ -599,6 +647,16 @@ body {
     .timeline > li .timeline-panel {
       padding: 0 20px 20px 100px;
     }
+
+    .category-opt > li a:link, a:active ,a:visited{
+
+      width: 40%;
+
+
+    }
+
+
+
     .timeline > li .timeline-image {
       width: 170px;
       height: 170px;
@@ -904,12 +962,15 @@ body {
     padding: 15px 25px;
     text-align: center;
     text-decoration: none;
+
   }
 
   .category-opt > li a:hover{
     color: #fed136;
 
   }
+
+
 
 
 
@@ -994,6 +1055,14 @@ body {
       overflow: hidden;
   }
 
+
+  .category-opt > li a:link, a:active ,a:visited{
+
+
+  }
+
+
+
   .top-menu > .left, .top-menu > .right {
       display: none;
   }
@@ -1043,6 +1112,14 @@ body {
       left: 10px;
       float: none;
   }
+
+  .category-opt > li a:link, a:active ,a:visited{
+
+    width: 90%;
+
+
+  }
+
 }
 
 .Signup{

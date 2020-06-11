@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Scroll, { Element, scroller } from 'react-scroll';
 
 class Team extends React.Component{
 
@@ -7,7 +7,10 @@ class Team extends React.Component{
     render(){
 
         return (
+          
 
+          
+          <Element name="team-element">
             <section className="bg-light page-section" id="team">
     <div className="container">
       <div className="row">
@@ -23,31 +26,7 @@ class Team extends React.Component{
           <div className="team-member">
             <img className="mx-auto rounded-circle" src="/img/team/ramsha.jpg" alt=""/>
             <h4>Ramsha Iftikhar</h4>
-            <p className="section-subheading text-muted">Lead Designer</p>
-            <ul className="list-inline social-buttons">
-              <li className="list-inline-item">
-                <a href="#something">
-                  <i className="fa fa-twitter"></i>
-                </a>
-              </li>
-              <li className="list-inline-item">
-                <a href="#something">
-                  <i className="fa fa-facebook-f"></i>
-                </a>
-              </li>
-              <li className="list-inline-item">
-                <a href="#something">
-                  <i className="fa fa-linkedin"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="col-sm-4">
-          <div className="team-member">
-            <img className="mx-auto rounded-circle" src="/img/team/ahsan.jpg" alt=""/>
-            <h4>Muhammad Ahsan</h4>
-            <p className=" section-subheading text-muted">Lead Marketer</p>
+            <p className="section-subheading text-muted">Front End Developer</p>
             <ul className="list-inline social-buttons">
               <li className="list-inline-item">
                 <a href="#something">
@@ -71,7 +50,7 @@ class Team extends React.Component{
           <div className="team-member">
             <img className="mx-auto rounded-circle" src="/img/team/junaid.jpg" alt=""/>
             <h4>Junaid Khalid</h4>
-            <p className="section-subheading text-muted">Lead Developer</p>
+            <p className="section-subheading text-muted">Data Scientist</p>
             <ul className="list-inline social-buttons">
               <li className="list-inline-item">
                 <a href="#something">
@@ -91,6 +70,31 @@ class Team extends React.Component{
             </ul>
           </div>
         </div>
+        <div className="col-sm-4">
+          <div className="team-member">
+            <img className="mx-auto rounded-circle" src="/img/team/ahsan.jpg" alt=""/>
+            <h4>Muhammad Ahsan</h4>
+            <p className=" section-subheading text-muted">Back End Developer</p>
+            <ul className="list-inline social-buttons">
+              <li className="list-inline-item">
+                <a href="#something">
+                  <i className="fa fa-twitter"></i>
+                </a>
+              </li>
+              <li className="list-inline-item">
+                <a href="#something">
+                  <i className="fa fa-facebook-f"></i>
+                </a>
+              </li>
+              <li className="list-inline-item">
+                <a href="#something">
+                  <i className="fa fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
       </div>
       <div className="row">
         <div className="col-lg-8 mx-auto text-center">
@@ -99,7 +103,8 @@ class Team extends React.Component{
       </div>
     </div>
   </section>
-
+  </Element>
+  
 
 
         );

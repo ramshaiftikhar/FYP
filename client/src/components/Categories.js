@@ -1,9 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Scroll, { Element, scroller } from 'react-scroll'
+
 
 class Categories extends React.Component {
   render() {
+
     return (
+      <Element name="categories-element">
       <div id="categories" className="container">
         <header className="page-header">
           <h2 className="section-heading">Browse by Category</h2>
@@ -11,7 +15,7 @@ class Categories extends React.Component {
         <ul className="category-opt section-subheading">
           {categories &&
             categories.map(category => (
-              <li>
+              <li className="category">
                 <Link to={{ pathname: "/category", state: { category } }}>
                   <i className={`fa fa-${category.icon}`} /> {category.title}
                 </Link>
@@ -19,6 +23,7 @@ class Categories extends React.Component {
             ))}
         </ul>
       </div>
+      </Element>
     );
   }
 }
@@ -27,7 +32,7 @@ export default Categories;
 
 let categories = [
   {
-    title: "Cloth",
+    title: "Clothes",
     apiRoute: "cloth",
     icon: "home"
   },

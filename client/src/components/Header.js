@@ -1,7 +1,17 @@
 import React from 'react';
+import Scroll, { Element, scroller } from 'react-scroll';
 
 
 class Header extends React.Component{
+
+    scrollToPlace = (e) => {
+        e.preventDefault();
+        console.log('working');
+        scroller.scrollTo('getstarted-element', {
+            duration: 1500,
+            smooth: true,
+          });
+    };
 
 
     render(){
@@ -13,7 +23,7 @@ class Header extends React.Component{
                 <div className="intro-text">
                 <div className="intro-lead-in intro-heading ">You can make a difference!</div>
                 <div className="intro-lead-in ">Raise money for charity and personal causes</div>
-                <a className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#started">Get Started</a>
+                <button className="btn btn-primary btn-xl text-uppercase js-scroll-trigger"  onClick={ this.scrollToPlace }>Get Started</button>
                 </div>
             </div>
             </header>

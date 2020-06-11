@@ -1,7 +1,9 @@
 import React from 'react'
+import Scroll, { Element, scroller } from 'react-scroll';
 
 export default ({ startedLinks }) => {
     return (
+      <Element name="getstarted-element">
 
     <section className="bg-light page-section" id="started">
       <div className="container">
@@ -43,6 +45,7 @@ export default ({ startedLinks }) => {
       </div>
       
   </section>
+  </Element>
 
 
         

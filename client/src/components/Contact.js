@@ -1,4 +1,5 @@
 import React from 'react';
+import Scroll, { Element, scroller } from 'react-scroll';
 
 
 class Contact extends React.Component{
@@ -7,6 +8,10 @@ class Contact extends React.Component{
     render(){
 
         return (
+
+          <Element name="contact-element">
+    
+
 
             <section className="page-section" id="contact">
             <div className="container">
@@ -51,6 +56,10 @@ class Contact extends React.Component{
               </div>
             </div>
           </section>
+
+          </Element>
+       
+
 
         );
     }
