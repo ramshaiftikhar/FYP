@@ -11,6 +11,8 @@ import Team from "../components/Team";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
+
+
 class Landing extends React.Component {
 
   render() {
@@ -27,6 +29,9 @@ class Landing extends React.Component {
                 
         {/* How it works section
         <Howitworks /> */}
+        
+
+
 
         {/* Get started Grid */}
         <Getstarted />

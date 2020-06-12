@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 import Scroll, { Element, scroller } from 'react-scroll'
 
 
@@ -17,7 +18,7 @@ class Categories extends React.Component {
             categories.map(category => (
               <li className="category">
                 <Link to={{ pathname: "/category", state: { category } }}>
-                  <i className={`fa fa-${category.icon}`} /> {category.title}
+                  <i className={`fas fa-${category.icon}`} /> {category.title}
                 </Link>
               </li>
             ))}
@@ -34,7 +35,7 @@ let categories = [
   {
     title: "Clothes",
     apiRoute: "cloth",
-    icon: "home"
+    icon: "tshirt"
   },
   {
     title: "Disaster Relief",
@@ -54,12 +55,12 @@ let categories = [
   {
     title: "COVID",
     apiRoute: "covid",
-    icon: "plus"
+    icon: "ambulance"
   },
   {
     title: "Food",
     apiRoute: "food",
-    icon: "cutlery"
+    icon: "bread-slice"
   },
   {
     title: "Bills",

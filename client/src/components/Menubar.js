@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 
+
 class Menubar extends React.Component {
  
   state = { isOpen: false };
@@ -60,12 +61,13 @@ class Menubar extends React.Component {
 
       >
         
+        
        
         
        
         <div className="container">
-    
-         
+
+          
           <p className="navbar-brand js-scroll-trigger">
 
             Raabta
@@ -74,7 +76,7 @@ class Menubar extends React.Component {
           
 
           
-          <button
+          *<button
           
             className="navbar-toggler navbar-toggler-right"
             type="button"
@@ -85,7 +87,7 @@ class Menubar extends React.Component {
             onClick={this.handleToggle}
           >
             <FaAlignRight className="nav-icon"></FaAlignRight>
-          </button>
+          </button> 
 
           
           
@@ -93,10 +95,7 @@ class Menubar extends React.Component {
             <ul className="navbar-nav text-uppercase ml-auto">
               <li className="nav-item" onClick={ (e) => this.scrollToPlace(e, "about-element") }>
                 {window.location.pathname !== "/" ? (
-                  <Link className="nav-link js-scroll-trigger" 
-                  to="/"
-                  >
-                  >
+                  <Link className="nav-link js-scroll-trigger" to="/">
                     About us
                   </Link>
                 ) : (

@@ -8,6 +8,9 @@ import axios from "axios";
 import Menubar from "./components/Menubar";
 import Header from "./components/Header";
 import About from './components/About';
+//import SideDrawer from "./components/SideDrawer";
+//import Backdrop from './components/Backdrop/Backdrop'
+
 
 class App extends React.Component {
   constructor(props) {
@@ -55,7 +58,12 @@ class App extends React.Component {
     return (
       <Router>
         <div className="App">
+         
           <Menubar updateUser={this.updateUser} loggedIn={loggedIn} />
+          {/*<SideDrawer/>   */}
+          {/*<Backdrop/>*/}
+        
+          
           <Switch>
             <Route exact path="/" component={Landing} />
             <Route exact path="/aboutus" component={About} />

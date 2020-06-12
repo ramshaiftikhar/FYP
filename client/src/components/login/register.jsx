@@ -1,5 +1,6 @@
 import React from "react";
 import loginImg from "../../login.svg";
+import   './error.css';
 import {
   BrowserRouter as Router,
   Route,
@@ -16,6 +17,9 @@ export class Register extends React.Component {
       name: "",
       email: "",
       password: "",
+      nameError:"",
+      emailError: "",
+      passeordError: "",
       redirectTo: null
     };
   }
@@ -25,8 +29,40 @@ export class Register extends React.Component {
     });
   };
 
+  validate = () => {
+    let nameError = "";
+    let passwordError = "";
+    let emailError = "";
+   
+
+    if (!this.state.name) {
+      nameError = "Name is a required field.";
+    }
+
+    if (!this.state.password) {
+      passwordError = "Password is a required field.";
+    }
+    
+
+    if (!this.state.email.includes("@")) {
+      emailError = "Email address cannot be blank or invalid.";
+    }
+
+    if (emailError || passwordError || nameError) {
+      this.setState({ emailError, passwordError, nameError });
+      return false;
+    }
+
+    return true;
+  };
+
+
+
+
   handleSubmit = event => {
     event.preventDefault();
+    const isValid = this.validate();
+    if (isValid) {
     const { email, password } = this.state;
     axios
       .post("/user/", {
@@ -51,6 +87,7 @@ export class Register extends React.Component {
         console.log("signup error: ");
         console.log(error);
       });
+    }
   };
   render() {
     const { name, email, password } = this.state;
@@ -74,6 +111,9 @@ export class Register extends React.Component {
                   value={name}
                   onChange={this.handleChange}
                 />
+                 <div className="error-message">
+                {this.state.nameError}
+                </div>
               </div>
               <div className="form-group">
                 <label htmlFor="email">Email</label>
@@ -84,6 +124,9 @@ export class Register extends React.Component {
                   value={email}
                   onChange={this.handleChange}
                 />
+                 <div className="error-message">
+                {this.state.emailError}
+                </div>
               </div>
 
               <div className="form-group">
@@ -95,10 +138,11 @@ export class Register extends React.Component {
                   value={password}
                   onChange={this.handleChange}
                 />
+                 <div className="error-message">
+                {this.state.passwordError}
+                </div>
               </div>
-            </div>
-          </div>
-          <div className="footer">
+              <div className="footer">
             <Link to="/">
               <button
                 type="button"
@@ -109,6 +153,10 @@ export class Register extends React.Component {
               </button>{" "}
             </Link>
           </div>
+            </div>
+            
+          </div>
+          
         </div>
       );
     }

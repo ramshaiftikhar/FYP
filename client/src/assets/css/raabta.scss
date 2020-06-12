@@ -989,7 +989,7 @@ body {
 
   }
 
-  .col-1{width:8.33%;}
+.col-1{width:8.33%;}
 .col-2{width:16.66%;}
 .col-3{width:25%;}
 .col-4{width:33.33%;}
@@ -1240,6 +1240,9 @@ body {
     justify-content: center;
     height: 90%;
     background-color: #fed136;
+   // background: linear-gradient(black, white,#fed136);
+   
+  background-size: cover;
     width: 100%;
     position: absolute;
     right: -34%;
@@ -1279,7 +1282,9 @@ body {
 
 //Button
 .login-btn {
+ 
   font-size: 21px;
+  font-weight: 700;
   padding: 5px 20px;
   border: 0;
   background-color:  #fed136;
@@ -1288,7 +1293,7 @@ body {
   transition: all 250ms ease-in-out;
   cursor: pointer;
   &:hover {
-    background-color: #2386c8;
+    background-color: black;
   }
   &:focus {
     outline: none;

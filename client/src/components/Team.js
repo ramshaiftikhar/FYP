@@ -30,17 +30,17 @@ class Team extends React.Component{
             <ul className="list-inline social-buttons">
               <li className="list-inline-item">
                 <a href="#something">
-                  <i className="fa fa-twitter"></i>
+                  <i className="fab fa-twitter"></i>
                 </a>
               </li>
               <li className="list-inline-item">
                 <a href="#something">
-                  <i className="fa fa-facebook-f"></i>
+                  <i className="fab fa-facebook-f"></i>
                 </a>
               </li>
               <li className="list-inline-item">
                 <a href="#something">
-                  <i className="fa fa-linkedin"></i>
+                  <i className="fab fa-linkedin"></i>
                 </a>
               </li>
             </ul>
@@ -54,17 +54,17 @@ class Team extends React.Component{
             <ul className="list-inline social-buttons">
               <li className="list-inline-item">
                 <a href="#something">
-                  <i className="fa fa-twitter"></i>
+                  <i className="fab fa-twitter"></i>
                 </a>
               </li>
               <li className="list-inline-item">
                 <a href="#something">
-                  <i className="fa fa-facebook-f"></i>
+                  <i className="fab fa-facebook-f"></i>
                 </a>
               </li>
               <li className="list-inline-item">
                 <a href="#something">
-                  <i className="fa fa-linkedin"></i>
+                  <i className="fab fa-linkedin"></i>
                 </a>
               </li>
             </ul>
@@ -78,17 +78,17 @@ class Team extends React.Component{
             <ul className="list-inline social-buttons">
               <li className="list-inline-item">
                 <a href="#something">
-                  <i className="fa fa-twitter"></i>
+                  <i className="fab fa-twitter"></i>
                 </a>
               </li>
               <li className="list-inline-item">
                 <a href="#something">
-                  <i className="fa fa-facebook-f"></i>
+                  <i className="fab fa-facebook-f"></i>
                 </a>
               </li>
               <li className="list-inline-item">
                 <a href="#something">
-                  <i className="fa fa-linkedin"></i>
+                  <i className="fab fa-linkedin"></i>
                 </a>
               </li>
             </ul>
