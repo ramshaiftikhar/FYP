@@ -25,7 +25,7 @@ app.use(
     secret: "Amir Don", //pick a random string to make the hash that is generated secure
     store: new MongoStore({ mongooseConnection: dbConnection }),
     resave: false,
-    saveUninitialized: true
+    saveUninitialized: true,
   })
 );
 app.use(passport.initialize());
@@ -35,7 +35,6 @@ app.use("/", fundRaising);
 app.use("/", tweets);
 app.use("/", reddits);
 app.use("/", fbPosts);
-
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 

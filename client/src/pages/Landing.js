@@ -10,14 +10,13 @@ import Categories from "../components/Categories";
 import Team from "../components/Team";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
-
-
+import Menubar from "../components/Menubar";
 
 class Landing extends React.Component {
-
   render() {
     return (
       <div className="landing">
+        <Menubar />
         {/* Header section*/}
         <Header />
 
@@ -25,13 +24,10 @@ class Landing extends React.Component {
         <About />
 
         {/* Why Raabta section*/}
-        <Howitworks/>
-                
+        <Howitworks />
+
         {/* How it works section
         <Howitworks /> */}
-        
-
-
 
         {/* Get started Grid */}
         <Getstarted />

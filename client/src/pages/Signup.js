@@ -1,11 +1,13 @@
 import React from "react";
 import { Login, Register } from "../components/login/index";
-
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import { HomeLink } from "../widgets/links";
 class Signup extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isLogginActive: true
+      isLogginActive: true,
     };
   }
 
@@ -24,7 +26,9 @@ class Signup extends React.Component {
       this.rightSide.classList.remove("left");
       this.rightSide.classList.add("right");
     }
-    this.setState(prevState => ({ isLogginActive: !prevState.isLogginActive }));
+    this.setState((prevState) => ({
+      isLogginActive: !prevState.isLogginActive,
+    }));
   }
 
   render() {
@@ -32,35 +36,40 @@ class Signup extends React.Component {
     const current = isLogginActive ? "Register" : "Login";
     const currentActive = isLogginActive ? "login" : "register";
     return (
-      <div className="Signup">
-        <div className="login">
-          <div className="container" ref={ref => (this.container = ref)}>
-            {isLogginActive && (
-              <Login
-                containerRef={ref => (this.current = ref)}
-                updateUser={userObject => this.props.updateUser(userObject)}
-              />
-            )}
-            {!isLogginActive && (
-              <Register
-                containerRef={ref => (this.current = ref)}
-                updateUser={userObject => this.props.updateUser(userObject)}
-              />
-            )}
+      <>
+        <HomeLink to="/" className="navbar-brand">
+          Raabta
+        </HomeLink>
+        <SignupContainer>
+          <div className="login">
+            <div className="container" ref={(ref) => (this.container = ref)}>
+              {isLogginActive && (
+                <Login
+                  containerRef={(ref) => (this.current = ref)}
+                  updateUser={(userObject) => this.props.updateUser(userObject)}
+                />
+              )}
+              {!isLogginActive && (
+                <Register
+                  containerRef={(ref) => (this.current = ref)}
+                  updateUser={(userObject) => this.props.updateUser(userObject)}
+                />
+              )}
+            </div>
+            <RightSide
+              current={current}
+              currentActive={currentActive}
+              containerRef={(ref) => (this.rightSide = ref)}
+              onClick={this.changeState.bind(this)}
+            />
           </div>
-          <RightSide
-            current={current}
-            currentActive={currentActive}
-            containerRef={ref => (this.rightSide = ref)}
-            onClick={this.changeState.bind(this)}
-          />
-        </div>
-      </div>
+        </SignupContainer>
+      </>
     );
   }
 }
 
-const RightSide = props => {
+const RightSide = (props) => {
   return (
     <div
       className="right-side"
@@ -74,4 +83,10 @@ const RightSide = props => {
   );
 };
 
+const SignupContainer = styled.div`
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 export default Signup;

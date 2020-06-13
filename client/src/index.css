@@ -1,5 +1,5 @@
-html{
-  height:100%;
+html {
+  height: 100%;
 }
 
 body {
@@ -11,7 +11,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.cursor-pointer {
+  cursor: pointer;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

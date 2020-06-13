@@ -13,22 +13,22 @@ class StartFundraiser extends React.Component {
       categoryName: "",
       amount: "",
       description: "",
-      image: null
+      image: null,
     };
   }
 
-  handleChange = event => {
+  handleChange = (event) => {
     console.log(event.target.value);
     this.setState({
-      [event.target.name]: event.target.value
+      [event.target.name]: event.target.value,
     });
   };
-  handleChangeImage = e => {
+  handleChangeImage = (e) => {
     this.setState({
-      image: e.target.files[0]
+      image: e.target.files[0],
     });
   };
-  handleSubmit = event => {
+  handleSubmit = (event) => {
     event.preventDefault();
     const {
       name,
@@ -37,7 +37,7 @@ class StartFundraiser extends React.Component {
       categoryName,
       amount,
       description,
-      image
+      image,
     } = this.state;
     console.log(image);
     if (!name || !email || !phone || !categoryName || !description) {
@@ -62,15 +62,15 @@ class StartFundraiser extends React.Component {
       axios
         .post("/addFundRaisingPost/", formData, {
           headers: {
-            "Content-Type": "multipart/form-data"
-          }
+            "Content-Type": "multipart/form-data",
+          },
         })
-        .then(response => {
+        .then((response) => {
           console.log("response", response.data);
           alert("Submitted successfully");
           this.props.history.push("/");
         })
-        .catch(error => {
+        .catch((error) => {
           console.log(error);
         });
     }
@@ -82,7 +82,7 @@ class StartFundraiser extends React.Component {
       phone,
       categoryName,
       amount,
-      description
+      description,
     } = this.state;
     if (!this.props.loggedIn) {
       return <Redirect to="/signup" />;
@@ -127,7 +127,9 @@ class StartFundraiser extends React.Component {
                 className="browser-default custom-select"
                 value={categoryName}
                 style={{ marginBottom: 30 }}
-                onChange={e => this.setState({ categoryName: e.target.value })}
+                onChange={(e) =>
+                  this.setState({ categoryName: e.target.value })
+                }
                 required
               >
                 <option>Choose your option</option>
