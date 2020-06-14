@@ -5,7 +5,7 @@ export class Header extends React.Component {
   scrollToPlace = (e) => {
     e.preventDefault();
     console.log("working");
-    scroller.scrollTo("getstarted-element", {
+    scroller.scrollTo("started-element", {
       duration: 1500,
       smooth: true,
     });

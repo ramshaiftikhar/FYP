@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { useStore } from "../../context/AuthContext";
 import axios from "axios";
 export const UserHeader = (props) => {
+  const linkRef = React.createRef();
   const [state, dispatch] = useStore();
   const logout = (event) => {
     console.log("logging out");
@@ -22,7 +23,9 @@ export const UserHeader = (props) => {
   console.log(state);
   return (
     <StyledHeader className="fixed-top d-flex align-items-center justify-content-between px-2 bg-dark text-light">
-      <h4 className="text-primary">Raabta</h4>
+      <Link to="/search" className="text-decoration-none">
+        <h4 className="text-primary cursor-pointer">Raabta</h4>
+      </Link>
       <ul className="nav">
         <li className="nav-item">
           <Link

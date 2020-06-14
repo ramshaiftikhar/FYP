@@ -3,6 +3,7 @@ import { StartFundRaiserForm } from "../../components/forms";
 import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
+import { Redirect } from "react-router-dom";
 const CreateFundRaiser = (props) => {
   const [form, formUpdater] = useState({
     formValues: {
@@ -17,6 +18,7 @@ const CreateFundRaiser = (props) => {
     formFilled: false,
   });
   const [error, errorUpdater] = useState(null);
+  const [redirect, redirectFlag] = useState(false);
   useEffect(() => {
     if (form.formValues.file === null && form.formFilled === true) {
       errorUpdater("Please upload picture");
@@ -36,7 +38,7 @@ const CreateFundRaiser = (props) => {
           errorUpdater(null);
           console.log("response", response.data);
           alert("Submitted successfully");
-          this.props.history.push("/");
+          redirectFlag(true);
         })
         .catch((error) => {
           errorUpdater(null);
@@ -44,12 +46,16 @@ const CreateFundRaiser = (props) => {
         });
     }
   }, [form]);
-  return (
-    <div className="container">
-      {error && <div className="text-danger mb-2">{error}</div>}
-      <StartFundRaiserForm formHandler={formUpdater} />
-    </div>
-  );
+  if (redirect) {
+    return <Redirect to="/user/view" />;
+  } else {
+    return (
+      <div className="container">
+        {error && <div className="text-danger mb-2">{error}</div>}
+        <StartFundRaiserForm formHandler={formUpdater} />
+      </div>
+    );
+  }
 };
 
 export default CreateFundRaiser;
