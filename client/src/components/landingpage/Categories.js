@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import Scroll, { Element, scroller } from "react-scroll";
+import { Element } from "react-scroll";
 
-const Categories = (props) => {
+export const Categories = (props) => {
   return (
     <StyledElement name="categories-element">
       <div id="categories" className="container">
@@ -46,50 +46,3 @@ const StyledElement = styled(Element)`
 const StyledLink = styled(Link)`
   text-decoration: none !important;
 `;
-let categories = [
-  {
-    title: "Clothes",
-    apiRoute: "cloth",
-    icon: "tshirt",
-  },
-  {
-    title: "Disaster Relief",
-    apiRoute: "disaster_relief",
-    icon: "wheelchair",
-  },
-  {
-    title: "Education",
-    apiRoute: "basic_needs",
-    icon: "graduation-cap",
-  },
-  {
-    title: "Animals & Pets",
-    apiRoute: "basic_needs",
-    icon: "paw",
-  },
-  {
-    title: "COVID",
-    apiRoute: "covid",
-    icon: "ambulance",
-  },
-  {
-    title: "Food",
-    apiRoute: "food",
-    icon: "bread-slice",
-  },
-  {
-    title: "Bills",
-    apiRoute: "basic_needs",
-    icon: "credit-card",
-  },
-  {
-    title: "Environment",
-    apiRoute: "environment",
-    icon: "globe",
-  },
-  {
-    title: "Miscellaneous",
-    apiRoute: "basic_needs",
-    icon: "plus",
-  },
-];

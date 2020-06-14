@@ -1,16 +1,18 @@
 import React from "react";
 //import Started from './components/Started';
 //import Menubar from "../components/Menubar";
-import Header from "../components/Header";
-import About from "../components/About";
-import Howitworks from "../components/Howitworks";
-import Getstarted from "../components/Getstarted";
-import Startedmodal from "../components/Startedmodal";
-import Categories from "../components/Categories";
-import Team from "../components/Team";
-import Contact from "../components/Contact";
-import Footer from "../components/Footer";
-import Menubar from "../components/Menubar";
+import {
+  Getstarted,
+  Team,
+  Howitworks,
+  Startedmodal,
+  Contact,
+  Categories,
+  Footer,
+  Header,
+  About,
+} from "../components/landingpage";
+import { Menubar } from "../components/headers";
 
 class Landing extends React.Component {
   render() {

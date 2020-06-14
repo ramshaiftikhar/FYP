@@ -3,7 +3,7 @@ import { Switch, useRouteMatch, Redirect } from "react-router-dom";
 import CreateFundRaiser from "../pages/user/CreateFundRaiser";
 import ViewFundRaiser from "../pages/user/ViewFundRaisers";
 import { UserRoute } from "../shared/authentication";
-import { UserHeader } from "../sections/headers";
+import { UserHeader } from "../components/headers";
 import styled from "styled-components";
 const UserTemplate = (props) => {
   const match = useRouteMatch();

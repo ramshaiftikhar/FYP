@@ -1,8 +1,7 @@
 import React from "react";
 import { Login, Register } from "../components/login/index";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { HomeLink } from "../widgets/links";
+import { HomeLink } from "../components/links";
 class Signup extends React.Component {
   constructor(props) {
     super(props);

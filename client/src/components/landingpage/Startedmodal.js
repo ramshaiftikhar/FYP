@@ -1,6 +1,6 @@
 import React from "react";
 
-class Startedmodal extends React.Component {
+export class Startedmodal extends React.Component {
   render() {
     return (
       <div
@@ -61,5 +61,3 @@ class Startedmodal extends React.Component {
     );
   }
 }
-
-export default Startedmodal;

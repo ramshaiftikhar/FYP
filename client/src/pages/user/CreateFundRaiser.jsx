@@ -1,5 +1,5 @@
 import React from "react";
-import { StartFundRaiserForm } from "../../sections/forms";
+import { StartFundRaiserForm } from "../../components/forms";
 import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";

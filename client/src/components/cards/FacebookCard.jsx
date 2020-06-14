@@ -14,14 +14,17 @@ export const FacebookCard = (props) => {
           </div>
           <i className="fab fa-facebook align-self-start text-primary fa-2x"></i>
         </div>
-        <div className="font-weight-bold text-secondary my-2">{props.text}</div>
+        <div className="font-weight-bold text-secondary my-2">
+          {props.comp_text}
+        </div>
         <div className="d-flex justify-content-center">
-          {props.image && <StyledImage src={props.image} />}
+          {props.images && <StyledImage src={props.images} />}
         </div>
       </div>
-      <div className="d-flex justify-content-end">
+      <div className="d-flex justify-content-between">
+        <div>Created at: {new Date(props.time).toLocaleString()}</div>
         <a
-          href={props.link}
+          href={props.post_url}
           className="text-primary text-decoration-none"
           ref={linkRef}
           target="_blank"

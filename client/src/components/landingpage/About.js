@@ -1,8 +1,8 @@
 import React from "react";
 import Scroller, { Element, scroller } from "react-scroll";
-import ScrollToTop from "./ScrollToTop";
+import ScrollToTop from "../ScrollToTop";
 
-class About extends React.Component {
+export class About extends React.Component {
   render() {
     return (
       <Element name="aboutus-element">
@@ -71,5 +71,3 @@ class About extends React.Component {
     );
   }
 }
-
-export default About;

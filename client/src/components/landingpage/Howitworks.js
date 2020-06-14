@@ -1,13 +1,6 @@
 import React from "react";
-import {
-  MDBInput,
-  MDBCol,
-  MDBBtn,
-  MDBCollapse,
-  MDBContainer,
-  MDBRow,
-} from "mdbreact";
-class Howitworks extends React.Component {
+
+export class Howitworks extends React.Component {
   render() {
     return (
       <div id="how-it-works" className="clearfix">
@@ -88,5 +81,3 @@ class Howitworks extends React.Component {
     );
   }
 }
-
-export default Howitworks;

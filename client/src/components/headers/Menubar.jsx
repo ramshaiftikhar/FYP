@@ -4,7 +4,7 @@ import { scroller } from "react-scroll";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useState } from "react";
-import { useStore } from "../context/AuthContext";
+import { useStore } from "../../context/AuthContext";
 const links = {
   aboutus: "About Us",
   started: "Get Started",
@@ -12,7 +12,7 @@ const links = {
   team: "Team",
   contact: "Contact",
 };
-const Menubar = () => {
+export const Menubar = () => {
   const [isOpen, toggler] = useState(false);
   const [state, dispatch] = useStore();
   const handleToggle = () => {
@@ -108,5 +108,3 @@ const Menubar = () => {
     </nav>
   );
 };
-
-export default Menubar;

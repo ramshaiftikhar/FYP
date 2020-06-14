@@ -1,6 +1,6 @@
 import React from "react";
 import { useUserPosts } from "../../queries/UserQueries";
-import { FundRaiserCard } from "../../sections/cards";
+import { FundRaiserCard } from "../../components/cards";
 const ViewFundRaiser = (props) => {
   const userPosts = useUserPosts();
   console.log(userPosts);

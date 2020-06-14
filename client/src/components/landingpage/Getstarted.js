@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 //import Startedmodal from './Startedmodal';
 import { Element } from "react-scroll";
 
-class Getstarted extends React.Component {
+export class Getstarted extends React.Component {
   render() {
     const startedLinks = [
       {
@@ -81,5 +81,3 @@ class Getstarted extends React.Component {
     );
   }
 }
-
-export default Getstarted;

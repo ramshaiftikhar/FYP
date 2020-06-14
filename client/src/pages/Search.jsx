@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import SearchBar from "../widgets/inputs/SearchBar";
+import SearchBar from "../components/inputs/SearchBar";
 import styled from "styled-components";
 import {
   useFbPosts,
@@ -13,7 +13,7 @@ import {
   FacebookCard,
   RedditCard,
   FundRaiserCard,
-} from "../sections/cards";
+} from "../components/cards";
 import { useEffect } from "react";
 const Search = (props) => {
   const [categorySelected, categorySelector] = useState("All");
