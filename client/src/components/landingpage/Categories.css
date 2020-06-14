@@ -1,0 +1,22 @@
+.category-table-div{
+    margin-left: auto;
+    margin-right: auto;
+    width: 8em
+}
+
+.category-table{
+   
+    width: 600px;
+    box-shadow: none;
+    padding: .25rem;
+    background-color: #fff;
+    border: none;
+    border-radius: .25rem;
+    max-width: 100%;
+    height: auto;
+   
+}
+.img-thumbnail{
+
+    
+}
