@@ -6,7 +6,7 @@ export const FundRaiserCard = (props) => {
         <div className="d-flex">
           <div className="flex-grow-1">
             <h6 className="text-capitalize">Category: {props.categoryName}</h6>
-            <h6 className="text-secondary">Initiator: {props.name}</h6>
+            <h6 className="text-secondary">{props.name}</h6>
             <h6 className="text-secondary">Phone No.: {props.phone}</h6>
             <h6 className="text-secondary">Amount: {props.amount}</h6>
           </div>
