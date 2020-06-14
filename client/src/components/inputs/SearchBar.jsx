@@ -8,7 +8,7 @@ const SearchBar = ({ value, updater }) => {
         className="form-control"
         placeholder="Search"
         value={value}
-        onChange={updater}
+        onChange={(event) => updater(event.target.value)}
       />
       <div className="input-group-prepend">
         <span className="input-group-text">
