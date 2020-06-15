@@ -1,6 +1,8 @@
 import React from "react";
 import { Switch, useRouteMatch, Redirect } from "react-router-dom";
-import CreateFundRaiser from "../pages/user/CreateFundRaiser";
+import CreateFundraiser from "../pages/user/CreateFundraiser";
+
+import AllSearches from "../pages/AllSearches";
 import ViewFundRaiser from "../pages/user/ViewFundRaisers";
 import { UserRoute } from "../shared/authentication";
 import { UserHeader } from "../components/headers";
@@ -13,11 +15,14 @@ const UserTemplate = (props) => {
       <UserHeader></UserHeader>
       <Switch>
         <UserRoute path={`${match.path}create`}>
-          <CreateFundRaiser />
+          <CreateFundraiser />
         </UserRoute>
         <UserRoute path={`${match.path}view`}>
           <ViewFundRaiser />
         </UserRoute>
+        <UserRoute path={`${match.path}all`}>
+        <AllSearches />
+      </UserRoute>
         <Redirect to="/user/view" />
       </Switch>
     </UserWrapper>

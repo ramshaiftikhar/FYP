@@ -21,7 +21,7 @@ const SignupForm = (props) => {
     >
       {({ isSubmitting }) => (
         <Form>
-          <div className="header">Register</div>
+          <div style={{textAlign:"center"}}className="header">Register</div>
           <div className="content">
             <div className="image">
               <img src={loginImg} />

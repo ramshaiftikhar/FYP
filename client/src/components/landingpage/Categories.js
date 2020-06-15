@@ -13,9 +13,9 @@ export const Categories = (props) => {
           <h2 className="section-heading">Browse by Category</h2>
         </header>
         <div className="text-center">
-          <img className="category-table" src="/img/category-table3.png"></img>
+          <img className="category-table" src="/img/category-table4.png"></img>
         </div>
-        <StyledLink to="/search">
+        <StyledLink to="/all">
           <div className="d-flex justify-content-center">
             <button className="btn btn-primary btn-xl text-uppercase js-scroll-trigger">
               Browse

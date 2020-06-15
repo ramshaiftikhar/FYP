@@ -46,7 +46,7 @@ export const UserHeader = (props) => {
         <li className="nav-item">
           <Link
             className="nav-link text-decoration-none text-light"
-            to="/search"
+            to="/all"
           >
             Search
           </Link>

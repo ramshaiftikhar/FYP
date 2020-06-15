@@ -10,25 +10,27 @@ import {
 } from "../queries/SearchQueries";
 import {
   Card,
-  FacebookCard,
-  RedditCard,
-  FundRaiserCard,
+  NewFundraiserCard,
 } from "../components/cards";
 import { useEffect } from "react";
-const Search = (props) => {
+const VerifiedSearch = (props) => {
   const [categorySelected, categorySelector] = useState("All");
   const [search, searchUpdater] = useState("");
   const [loading, loadUpdate] = useState(false);
   const back = () => {
     window.history.back();
   };
-  const fbPosts = useFbPosts(categorySelected);
-  const redditPosts = useRedditPosts(categorySelected);
+
+
   const twitterPosts = useTwitterPosts(categorySelected);
   const fundRaiserPosts = useFundRaiserPosts(categorySelected);
+
   useEffect(() => {
     loadUpdate(!loading);
   }, [categorySelected, twitterPosts]);
+  
+  
+  
   return (
     <>
       <div className="d-flex justify-content-between px-3 my-3">
@@ -68,7 +70,7 @@ const Search = (props) => {
             <div className="col-11">
               <div className="row">
                 <div className="col-12">
-                  <h2>Verified Fundraisers</h2>
+                  <h2 style={{textAlign:"center"}}> <i class="fa fa-check" aria-hidden="true"></i> Verified Fundraisers</h2>
                   <hr />
                   <div className="row align-items-stretch">
                     {fundRaiserPosts.data.map((res, index) => {
@@ -77,42 +79,14 @@ const Search = (props) => {
                           className="col-xl-4 col-md-6 col-12 mb-2"
                           key={index}
                         >
-                          <FundRaiserCard {...res} />
+                          <NewFundraiserCard {...res} />
                         </div>
                       );
                     })}
                   </div>
                 </div>
-                <div className="col-xl-4 col-md-6 col-12">
-                  <h2>Twitter Posts</h2>
-                  <hr />
-                  {twitterPosts.data.length === 0 && <h2>No Tweets Found</h2>}
-                  {twitterPosts.data.map((res, index) => (
-                    <Card {...res} key={index} />
-                  ))}
-                </div>
-                <div className="col-xl-4 col-md-6 col-12">
-                  <h2>Facebook Posts</h2>
-                  <hr />
-                  {fbPosts.data.length === 0 && (
-                    <h2>No Facebook Posts Found</h2>
-                  )}
-
-                  {fbPosts.data.map((res, index) => (
-                    <FacebookCard {...res} key={index} />
-                  ))}
-                </div>
-                <div className="col-xl-4 col-md-6 col-12">
-                  <h2>Reddit Posts</h2>
-                  <hr />
-                  {redditPosts.data.length === 0 && (
-                    <h2>No Reddit Posts Found</h2>
-                  )}
-
-                  {redditPosts.data.map((res, index) => (
-                    <RedditCard {...res} key={index} />
-                  ))}
-                </div>
+              
+               
               </div>
             </div>
           )}
@@ -175,4 +149,4 @@ let categories = [
     icon: "plus",
   },
 ];
-export default Search;
+export default VerifiedSearch;
