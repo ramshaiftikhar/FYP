@@ -10,7 +10,7 @@ export class Team extends React.Component {
             <div className="row">
               <div className="col-lg-12 text-center">
                 <header className="page-header">
-                  <h2 className="section-heading">Our Amazing Team</h2>
+                  <h2  style={{color:'black'}} className="section-heading">Our Amazing Team</h2>
                 </header>
                 {/*<h3 className="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> */}
               </div>

@@ -10,7 +10,7 @@ export class About extends React.Component {
           <div className="container">
             <div className="row">
               <div className="col-lg-12 text-center">
-                <h2 className="section-heading">About Us</h2>
+                <h2 style={{color:'black'}}className="section-heading">About Us</h2>
                 <h3 className="section-subheading">Connecting for better..</h3>
               </div>
             </div>

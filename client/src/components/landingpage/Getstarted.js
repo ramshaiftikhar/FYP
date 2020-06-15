@@ -38,7 +38,7 @@ export class Getstarted extends React.Component {
           <div className="container">
             <div className="row">
               <div className="col-lg-12 text-center">
-                <h2 className="section-heading ">Ideas To Get You Started</h2>
+                <h2  style={{color:'black'}} className="section-heading ">Ideas To Get You Started</h2>
                 <h3 className="section-subheading">
                   There are a lot of ways to make good things happen...
                 </h3>

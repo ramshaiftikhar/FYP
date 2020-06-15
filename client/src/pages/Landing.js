@@ -9,10 +9,12 @@ import {
   Contact,
   Categories,
   Footer,
-  Header,
+Header,
   About,
+  
 } from "../components/landingpage";
 import { Menubar } from "../components/headers";
+
 
 class Landing extends React.Component {
   render() {
@@ -20,7 +22,7 @@ class Landing extends React.Component {
       <div className="landing">
         <Menubar />
         {/* Header section*/}
-        <Header />
+        <Header/>
 
         {/* About Us section*/}
         <About />

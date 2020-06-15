@@ -10,7 +10,7 @@ export const Categories = (props) => {
     <StyledElement name="categories-element">
       <div id="categories" className="container">
         <header className="page-header">
-          <h2 className="section-heading">Browse by Category</h2>
+          <h2 style={{color:'black'}} className="section-heading">Browse by Category</h2>
         </header>
         <div className="text-center">
           <img className="category-table" src="/img/category-table4.png"></img>
