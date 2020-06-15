@@ -1,7 +1,10 @@
 import React from "react";
 import { useUserPosts } from "../../queries/UserQueries";
-//import { FundRaiserCard } from "../../components/cards";
-import { NewFundraiserCard } from "../../components/cards";
+
+import { NewFundraiserCard} from "../../components/cards/NewFundraiserCard";
+
+//import { NewFundraiserCard } from "../../components/cards";
+
 const ViewFundRaiser = (props) => {
   const userPosts = useUserPosts();
   console.log(userPosts);

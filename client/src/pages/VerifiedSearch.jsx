@@ -8,10 +8,7 @@ import {
   useTwitterPosts,
   useFundRaiserPosts,
 } from "../queries/SearchQueries";
-import {
-  Card,
-  NewFundraiserCard,
-} from "../components/cards";
+import {NewFundraiserCard} from "../components/cards/NewFundraiserCard";
 import { useEffect } from "react";
 const VerifiedSearch = (props) => {
   const [categorySelected, categorySelector] = useState("All");

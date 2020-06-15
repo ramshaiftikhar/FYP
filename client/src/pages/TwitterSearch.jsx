@@ -8,11 +8,8 @@ import {
   useTwitterPosts,
  
 } from "../queries/SearchQueries";
-import {
-  Card,
-  
-  FundRaiserCard,
-} from "../components/cards";
+//import {TwitterCard, FundRaiserCard } from "../components/cards";
+import {Card} from "../components/cards/Card";
 import { useEffect } from "react";
 const TwitterSearch = (props) => {
   const [categorySelected, categorySelector] = useState("All");

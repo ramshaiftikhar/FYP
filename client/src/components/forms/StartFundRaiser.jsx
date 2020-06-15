@@ -36,6 +36,7 @@ export const StartFundRaiserForm = (props) => {
     >
       {({ isSubmitting }) => (
         <Form className="form-row">
+          
           <div className="col-12">
             <div className="form-group">
               <p className="h4 text-center mb-4">Create Fundraiser</p>

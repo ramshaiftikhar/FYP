@@ -1,6 +1,7 @@
 import React from "react";
 import { MDBJumbotron, MDBBtn, MDBContainer, MDBRow, MDBCol } from "mdbreact";
-import { StartFundRaiserForm } from "../../components/forms";
+import { StartFundRaiserForm } from "../../components/forms/StartFundRaiser";
+
 
 import { useState } from "react";
 import { useEffect } from "react";
@@ -65,7 +66,7 @@ const  CreateFundraiser = (props) => {
             <hr className="my-2" />
             <div className="container">
             {error && <div className="text-danger mb-2">{error}</div>}
-            <StartFundRaiserForm formHandler={formUpdater} />
+            <StartFundRaiserForm  formHandler={formUpdater} />
             </div>
             
           </MDBJumbotron>

@@ -6,4 +6,5 @@ export * from "./FundRaiserCard";
 export * from "./NewFundraiserCard";
 
 
-export * from "./Details";
+
+

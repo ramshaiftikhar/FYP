@@ -9,11 +9,7 @@ import {
   useTwitterPosts,
   
 } from "../queries/SearchQueries";
-import {
-  Card,
-  FacebookCard,
- 
-} from "../components/cards";
+import {FacebookCard} from "../components/cards/FacebookCard";
 import { useEffect } from "react";
 const FacebookSearch = (props) => {
   const [categorySelected, categorySelector] = useState("All");
@@ -75,7 +71,7 @@ const FacebookSearch = (props) => {
                 
                   <hr />
 
-                  <div className=" col-xl-4 col-md-6 col-12">
+                  <div className= "col-xl-4 col-md-6 col-12">
                   <hr />
                   {fbPosts.data.length === 0 && (
                     <h2>No Facebook Posts Found</h2>
