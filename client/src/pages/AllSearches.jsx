@@ -60,7 +60,7 @@ const AllSearches = (props) => {
                   <div className="container">
                     <div className="row">
                       <div className="col">
-                        <StyledLink to="/fundRaiser">
+                        <StyledLink to="search/fundRaiser">
                           <div className="colorB3" id="email-div">
                             <h3 className="disappear">
                               <span>Verified</span>
@@ -80,7 +80,7 @@ const AllSearches = (props) => {
                       </div>
 
                       <div className="col">
-                        <StyledLink to="/facebook">
+                        <StyledLink to="search/facebook">
                           <div className="colorB3" id="email-div">
                             <h3 className="disappear">
                               <span>Verified</span>
@@ -121,7 +121,7 @@ const AllSearches = (props) => {
 
                     <div class="row">
                       <div class="col">
-                        <StyledLink to="/twitter">
+                        <StyledLink to="search/twitter">
                           <div className=" colorB3" id="location-div">
                             <h3 className="disappear">
                               <span>Verified</span>
@@ -140,7 +140,7 @@ const AllSearches = (props) => {
                         </StyledLink>
                       </div>
                       <div className="col">
-                        <StyledLink to="/reddit">
+                        <StyledLink to="search/reddit">
                           <div className="colorB3" id="phone-div">
                             <h3 className="disappear">
                               <span>Verified</span>

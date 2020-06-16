@@ -18,11 +18,7 @@ export class Contact extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    axios({
-      method: "POST",
-      url: "http://localhost:3001/send",
-      data: this.state,
-    }).then((response) => {
+    axios.post("/email/send", this.state).then((response) => {
       if (response.data.status === "success") {
         //alert("Message Sent.");
         this.state.alert_message = "success";
