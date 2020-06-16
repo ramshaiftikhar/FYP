@@ -40,7 +40,6 @@ const CreateFundraiser = (props) => {
         .then((response) => {
           errorUpdater(null);
           console.log("response", response.data);
-          alert("Submitted successfully");
           redirectFlag(true);
         })
         .catch((error) => {

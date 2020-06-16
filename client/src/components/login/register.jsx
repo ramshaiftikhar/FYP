@@ -21,7 +21,6 @@ export const Register = (props) => {
         })
         .then((response) => {
           if (!response.data.errmsg) {
-            alert("Sign up Successful!");
             dispatch({
               type: "login",
               payload: { email: response.data.email },
