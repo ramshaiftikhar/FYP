@@ -1,36 +1,26 @@
-.created-at{
-    color:#fed136;
-    font-weight: 500;;
+.created-at {
+  color: #fed136;
+  font-weight: 500;
 }
-
-
 
 div.bg-white.rounded.shadow.mb-2.p-2.d-flex.flex-column.justify-content-between.cursor-pointer.overflow-hidden {
-    height: 300px! important;
+  height: 300px !important;
 }
 
+.fb-content {
+  height: 150px;
 
-
-
-.fb-content{
-    height: 100px;
-   
-    overflow-y: scroll;
+  overflow-y: scroll;
 }
 
-
-
-div.created-at{
-    position: absolute; 
-    bottom: 15px; 
-    margin: 0 auto;
+div.created-at {
+  position: absolute;
+  bottom: 15px;
+  margin: 0 auto;
 }
 
-button.btn-default.btn.Ripple.parent{
-    position: absolute; 
-    bottom: 15px; 
-    margin: 0 auto;
-
+button.btn-default.btn.Ripple.parent {
+  position: absolute;
+  bottom: 15px;
+  margin: 0 auto;
 }
-
-

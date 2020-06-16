@@ -83,13 +83,13 @@ export const StartFundRaiserForm = (props) => {
                 <option>Choose your option</option>
                 <option value="Misc">Misc</option>
                 <option value="Food">Food</option>
-                <option value="Cloth">Clothes</option>
+                <option value="Clothes">Clothes</option>
                 <option value="Education">Education</option>
-                <option value="Disaster Relief">Disaster Relief</option>
-                <option value="COVID">COVID</option>
+                <option value="Disaster">Disaster Relief</option>
+                <option value="Corona">COVID</option>
                 <option value="Bills">Bills</option>
                 <option value="Environment">Environment</option>
-                <option value="Animals/Pets">Animals/Pets</option>
+                <option value="Animals">Animals/Pets</option>
               </Field>
               <ErrorMessage name="categoryName">
                 {(msg) => (

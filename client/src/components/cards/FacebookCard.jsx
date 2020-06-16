@@ -33,10 +33,10 @@ export const FacebookCard = (props) => {
 
               <MDBCardText className="fb-content">
                 {props.comp_text}
+                <div className="d-flex justify-content-center">
+                  {props.images && <StyledImage src={props.images} />}
+                </div>
               </MDBCardText>
-              <div className="d-flex justify-content-center">
-                {props.images && <StyledImage src={props.images} />}
-              </div>
             </div>
             <div className="d-flex justify-content-between">
               <MDBCardText className="created-at">
