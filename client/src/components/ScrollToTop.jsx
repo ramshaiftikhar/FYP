@@ -46,18 +46,7 @@ export default class ScrollToTop extends Component {
               aria-hidden="true"
               height="38.735"
               width="33.749"
-            >
-              <svg>
-                <g transform="translate(-18.121 -3.364)">
-                  <g transform="translate(-.48 2.134)">
-                    <g fill="#FFFFFF">
-                      <path d="M22.435 17.62l4.684 4.685 5.044-5.044v19.352h6.625V17.26l5.044 5.044 4.683-4.684-13.04-13.04z" />
-                      <path d="M22.435 17.62l4.684 4.685 5.044-5.044v19.352h6.625V17.26l5.044 5.044 4.683-4.684-13.04-13.04z" />
-                    </g>
-                  </g>
-                </g>
-              </svg>
-            </i>
+            ></i>
           </div>
         )}
       </div>
