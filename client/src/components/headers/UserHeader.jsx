@@ -7,20 +7,15 @@ export const UserHeader = (props) => {
   const linkRef = React.createRef();
   const [state, dispatch] = useStore();
   const logout = (event) => {
-    console.log("logging out");
     axios
       .post("/user/logout")
       .then((response) => {
-        console.log(response.data); // Only for debugging
         if (response.status === 200) {
           dispatch({ type: "logout" });
         }
       })
-      .catch((error) => {
-        console.log("Error in Logging out");
-      });
+      .catch((error) => {});
   };
-  console.log(state);
   return (
     <StyledHeader className="fixed-top d-flex align-items-center justify-content-between px-2 bg-dark text-light">
       <Link to="/search" className="text-decoration-none">

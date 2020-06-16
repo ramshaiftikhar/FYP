@@ -2,13 +2,15 @@ import React from "react";
 import { useUserPosts } from "../../queries/UserQueries";
 
 import { NewFundraiserCard } from "../../components/cards/NewFundraiserCard";
+import { useState } from "react";
 
 //import { NewFundraiserCard } from "../../components/cards";
 
 const ViewFundRaiser = (props) => {
-  const userPosts = useUserPosts();
-  console.log(userPosts);
+  let [componentUpdate, toggler] = useState(true);
   console.log("hello");
+  const userPosts = useUserPosts(componentUpdate);
+  console.log(userPosts);
   return (
     <div className="container-fluid">
       <h1 style={{ textAlign: "center" }}>My Fundraisers</h1>
@@ -16,7 +18,10 @@ const ViewFundRaiser = (props) => {
       <div className="row">
         {userPosts.data.map((res, index) => (
           <div className="col-xl-4 col-md-6 col-12" key={index}>
-            <NewFundraiserCard {...res} />
+            <NewFundraiserCard
+              data={res}
+              update={{ componentUpdate, toggler }}
+            />
           </div>
         ))}
       </div>

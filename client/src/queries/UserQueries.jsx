@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-export const useUserPosts = () => {
+export const useUserPosts = (update = true) => {
   const [state, updater] = useState({ data: [], error: "" });
   useEffect(() => {
     axios
@@ -13,6 +13,6 @@ export const useUserPosts = () => {
         console.log(err);
         updater({ ...state, error: "Something went wrong" });
       });
-  }, []);
+  }, [update]);
   return state;
 };

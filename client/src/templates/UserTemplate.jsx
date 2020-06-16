@@ -9,7 +9,6 @@ import { UserHeader } from "../components/headers";
 import styled from "styled-components";
 const UserTemplate = (props) => {
   const match = useRouteMatch();
-  console.log(match.path);
   return (
     <UserWrapper>
       <UserHeader></UserHeader>

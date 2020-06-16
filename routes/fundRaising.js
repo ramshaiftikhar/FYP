@@ -38,6 +38,16 @@ router.get("/getFundRaisingPosts/:categoryName", (req, res) => {
     }
   );
 });
+router.delete("/fundRaising/:id", (req, res) => {
+  const { id } = req.params;
+  FundRaiser.deleteOne({ _id: id }, (err, del) => {
+    if (del) {
+      res.status(200).json({ status: "success" });
+    } else {
+      res.status(500).json({ status: "error" });
+    }
+  });
+});
 router.get("/userFundRaising", (req, res) => {
   FundRaiser.find(
     { creatorEmail: req.user.email },

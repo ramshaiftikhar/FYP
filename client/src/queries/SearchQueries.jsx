@@ -6,7 +6,7 @@ const UrlKeys = {
   twitter: "/getTweetsPosts/",
   fundRaiser: "/getFundRaisingPosts/",
 };
-export const usePosts = (posts, category) => {
+export const usePosts = (posts, category, update = true) => {
   const [state, updater] = useState({ data: [], error: "" });
 
   useEffect(() => {
@@ -20,6 +20,6 @@ export const usePosts = (posts, category) => {
         console.log(err);
         updater({ ...state, error: "Something Went Wrong" });
       });
-  }, [posts, category]);
+  }, [posts, category, update]);
   return state;
 };
