@@ -20,7 +20,11 @@ const LoginForm = (props) => {
     >
       {({ isSubmitting }) => (
         <Form>
+<<<<<<< HEAD
           <div className="header">Login</div>
+=======
+          <div style={{textAlign:"center"}} className="header">Login</div>
+>>>>>>> 46d009dc8abfbee4a9cdfdb3525b6ac6d147eafd
           <div className="content">
             <div className="image">
               <img src={loginImg} />

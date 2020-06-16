@@ -42,6 +42,7 @@ export default class ScrollToTop extends Component {
         {is_visible && (
           <div className="scrollup" onClick={() => this.scrollToTop()}>
             <i
+<<<<<<< HEAD
               className="fa fa-angle-up"
               aria-hidden="true"
               height="38.735"
@@ -58,6 +59,15 @@ export default class ScrollToTop extends Component {
                 </g>
               </svg>
             </i>
+=======
+              className="fas fa-angle-up"
+              aria-hidden="true"
+              height="38.735"
+              width="33.749"
+            > </i>
+              
+            
+>>>>>>> 46d009dc8abfbee4a9cdfdb3525b6ac6d147eafd
           </div>
         )}
       </div>

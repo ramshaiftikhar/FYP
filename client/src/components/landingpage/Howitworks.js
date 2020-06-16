@@ -7,7 +7,11 @@ export class Howitworks extends React.Component {
         <div className="container colorA2">
           <div id="how-it-works-box" className="col-12 col-m-12 col-m2-12">
             <header className="page-header">
+<<<<<<< HEAD
               <h2 className="section-heading">How It Works</h2>
+=======
+              <h2  style={{color:'black'}} className="section-heading">How It Works</h2>
+>>>>>>> 46d009dc8abfbee4a9cdfdb3525b6ac6d147eafd
             </header>
 
             <div className="row how-it-works-div">
