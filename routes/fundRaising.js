@@ -40,7 +40,7 @@ router.get("/getFundRaisingPosts/:categoryName", (req, res) => {
 });
 router.get("/userFundRaising", (req, res) => {
   FundRaiser.find(
-    { email: req.user.email },
+    { creatorEmail: req.user.email },
     null,
     { limit: 9, sort: { _id: -1 } },
     (err, fundRaisePosts) => {
@@ -55,6 +55,7 @@ router.get("/userFundRaising", (req, res) => {
 router.post("/addFundRaisingPost/", upload.single("file"), (req, res) => {
   console.log("Data received", req.body);
   let post = req.body;
+  post = { ...post, creatorEmail: req.user.email };
   post.image = req.file.path;
 
   FundRaiser.create(post, (err, fundRaisePost) => {

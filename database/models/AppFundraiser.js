@@ -11,7 +11,8 @@ const fundRaiserSchema = new Schema({
   phone: String,
   dateCreated: String,
   image: { type: String, required: true },
-  dateString: { type: Date, default: Date.now }
+  creatorEmail: { type: String, required: true },
+  dateString: { type: Date, default: Date.now },
 });
 const fundRaiser = mongoose.model("FundRaiser", fundRaiserSchema);
 module.exports = fundRaiser;
