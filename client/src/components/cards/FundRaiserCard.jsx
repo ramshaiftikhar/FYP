@@ -1,18 +1,11 @@
 import React from "react";
-<<<<<<< HEAD
-=======
-
->>>>>>> 46d009dc8abfbee4a9cdfdb3525b6ac6d147eafd
 export const FundRaiserCard = (props) => {
   return (
     <div className="bg-white rounded shadow p-2 h-100 d-flex flex-column justify-content-between mb-2 cursor-pointer overflow-hidden overflow-hidden">
       <div>
         <div className="d-flex">
           <div className="flex-grow-1">
-<<<<<<< HEAD
-=======
             <img className="card-img" src={props.file}></img>
->>>>>>> 46d009dc8abfbee4a9cdfdb3525b6ac6d147eafd
             <h6 className="text-capitalize">Category: {props.categoryName}</h6>
             <h6 className="text-secondary">{props.name}</h6>
             <h6 className="text-secondary">Phone No.: {props.phone}</h6>

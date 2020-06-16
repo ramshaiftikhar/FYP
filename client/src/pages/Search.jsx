@@ -29,12 +29,9 @@ const Search = (props) => {
   useEffect(() => {
     loadUpdate(!loading);
   }, [categorySelected, twitterPosts]);
-<<<<<<< HEAD
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
-=======
->>>>>>> 46d009dc8abfbee4a9cdfdb3525b6ac6d147eafd
   return (
     <>
       <div className="d-flex justify-content-between px-3 my-3">
@@ -74,11 +71,7 @@ const Search = (props) => {
             <div className="col-11">
               <div className="row">
                 <div className="col-12">
-<<<<<<< HEAD
-                  <h2>Verified Fund Raisers</h2>
-=======
                   <h2>Verified Fundraisers</h2>
->>>>>>> 46d009dc8abfbee4a9cdfdb3525b6ac6d147eafd
                   <hr />
                   <div className="row align-items-stretch">
                     {fundRaiserPosts.data.map((res, index) => {
@@ -137,11 +130,7 @@ const Category = styled.div`
 let categories = [
   {
     title: "All",
-<<<<<<< HEAD
-    icon: null,
-=======
     icon: "check",
->>>>>>> 46d009dc8abfbee4a9cdfdb3525b6ac6d147eafd
   },
   {
     title: "Clothes",

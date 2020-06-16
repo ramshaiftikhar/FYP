@@ -44,14 +44,7 @@ export const UserHeader = (props) => {
           </Link>
         </li>
         <li className="nav-item">
-          <Link
-            className="nav-link text-decoration-none text-light"
-<<<<<<< HEAD
-            to="/search"
-=======
-            to="/all"
->>>>>>> 46d009dc8abfbee4a9cdfdb3525b6ac6d147eafd
-          >
+          <Link className="nav-link text-decoration-none text-light" to="/all">
             Search
           </Link>
         </li>

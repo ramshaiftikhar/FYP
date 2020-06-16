@@ -9,32 +9,18 @@ import {
   Contact,
   Categories,
   Footer,
-<<<<<<< HEAD
   Header,
   About,
 } from "../components/landingpage";
 import { Menubar } from "../components/headers";
 
-=======
-Header,
-  About,
-  
-} from "../components/landingpage";
-import { Menubar } from "../components/headers";
-
-
->>>>>>> 46d009dc8abfbee4a9cdfdb3525b6ac6d147eafd
 class Landing extends React.Component {
   render() {
     return (
       <div className="landing">
         <Menubar />
         {/* Header section*/}
-<<<<<<< HEAD
         <Header />
-=======
-        <Header/>
->>>>>>> 46d009dc8abfbee4a9cdfdb3525b6ac6d147eafd
 
         {/* About Us section*/}
         <About />
