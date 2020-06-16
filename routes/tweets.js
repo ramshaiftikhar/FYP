@@ -8,18 +8,13 @@ router.get("/getTweetsPosts/:categoryName", (req, res) => {
   if (categoryName !== "All") {
     query = { categoryName };
   }
-  Tweets.find(
-    query,
-    null,
-    { limit: 9, sort: { _id: -1 } },
-    (err, tweetsPosts) => {
-      if (err) {
-        console.log(err);
-      } else {
-        res.send({ tweetsPosts });
-      }
+  Tweets.find(query, null, { limit: 9, sort: { _id: -1 } }, (err, posts) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.send({ posts });
     }
-  );
+  });
 });
 
 module.exports = router;

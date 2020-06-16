@@ -29,11 +29,11 @@ router.get("/getFundRaisingPosts/:categoryName", (req, res) => {
     query,
     null,
     { limit: 6, sort: { _id: -1 } },
-    (err, fundRaisePosts) => {
+    (err, posts) => {
       if (err) {
         console.log(err);
       } else {
-        res.send({ fundRaisePosts });
+        res.send({ posts });
       }
     }
   );

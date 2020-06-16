@@ -12,11 +12,11 @@ router.get("/getFBPosts/:categoryName", (req, res) => {
     { ...query },
     null,
     { limit: 9, sort: { _id: -1 } },
-    (err, fBPosts) => {
+    (err, posts) => {
       if (err) {
         console.log(err);
       } else {
-        res.send({ fBPosts });
+        res.send({ posts });
       }
     }
   );

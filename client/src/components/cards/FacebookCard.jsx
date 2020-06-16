@@ -33,18 +33,15 @@ export const FacebookCard = (props) => {
 
               <MDBCardText className="fb-content">
                 {props.comp_text}
-
-                <div className="d-flex justify-content-center">
-                  {props.images && <StyledImage src={props.images} />}
-                </div>
               </MDBCardText>
+              <div className="d-flex justify-content-center">
+                {props.images && <StyledImage src={props.images} />}
+              </div>
             </div>
             <div className="d-flex justify-content-between">
-              <MDBCardText>
+              <MDBCardText className="created-at">
                 {" "}
-                <div class="created-at">
-                  Created at: {new Date(props.time).toLocaleString()}
-                </div>
+                Created at: {new Date(props.time).toLocaleString()}
               </MDBCardText>
               <a
                 href={props.post_url}

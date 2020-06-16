@@ -8,18 +8,13 @@ router.get("/getRedditsPosts/:categoryName", (req, res) => {
   if (categoryName !== "All") {
     query = { categoryName };
   }
-  Reddits.find(
-    query,
-    null,
-    { limit: 9, sort: { _id: -1 } },
-    (err, redditsPosts) => {
-      if (err) {
-        console.log(err);
-      } else {
-        res.send({ redditsPosts });
-      }
+  Reddits.find(query, null, { limit: 9, sort: { _id: -1 } }, (err, posts) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.send({ posts });
     }
-  );
+  });
 });
 
 module.exports = router;

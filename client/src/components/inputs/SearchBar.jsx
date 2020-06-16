@@ -14,7 +14,7 @@ const SearchBar = ({ value, updater }) => {
       />
       <div className="input-group-append">
         <span className="input-group-text" id="basic-text1">
-          <i class="fas fa-search" aria-hidden="true"></i>
+          <i className="fas fa-search" aria-hidden="true"></i>
         </span>
       </div>
     </div>
