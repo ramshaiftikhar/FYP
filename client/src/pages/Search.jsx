@@ -29,6 +29,9 @@ const Search = (props) => {
   useEffect(() => {
     loadUpdate(!loading);
   }, [categorySelected, twitterPosts]);
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <>
       <div className="d-flex justify-content-between px-3 my-3">
