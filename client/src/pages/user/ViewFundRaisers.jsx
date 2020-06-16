@@ -1,16 +1,21 @@
 import React from "react";
-import { useUserPosts } from "../../queries/UserQueries";
+import { useUserPosts, useDeletePost } from "../../queries/UserQueries";
 
 import { NewFundraiserCard } from "../../components/cards/NewFundraiserCard";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { MDBIcon } from "mdbreact";
 
 //import { NewFundraiserCard } from "../../components/cards";
 
 const ViewFundRaiser = (props) => {
-  let [componentUpdate, toggler] = useState(true);
-  console.log("hello");
+  let [delId, deleteIdUpdater] = useState(null);
+  let message = useDeletePost(delId);
+  let [componentUpdate, updater] = useState(true);
   const userPosts = useUserPosts(componentUpdate);
-  console.log(userPosts);
+  useEffect(() => {
+    updater(!componentUpdate);
+  }, [message]);
+
   return (
     <div className="container-fluid">
       <h1 style={{ textAlign: "center" }}>My Fundraisers</h1>
@@ -18,10 +23,13 @@ const ViewFundRaiser = (props) => {
       <div className="row">
         {userPosts.data.map((res, index) => (
           <div className="col-xl-4 col-md-6 col-12" key={index}>
-            <NewFundraiserCard
-              data={res}
-              update={{ componentUpdate, toggler }}
-            />
+            <NewFundraiserCard {...res}>
+              <MDBIcon
+                className="text-danger px-2 fa-lg li-ic cursor-pointer"
+                icon="trash"
+                onClick={() => deleteIdUpdater(res._id)}
+              ></MDBIcon>
+            </NewFundraiserCard>
           </div>
         ))}
       </div>

@@ -35,7 +35,7 @@ const FacebookSearch = (props) => {
         {searchQuery === "facebook" && <FacebookCard {...res} />}
         {searchQuery === "reddit" && <RedditCard {...res} />}
         {searchQuery === "twitter" && <Card {...res} />}
-        {searchQuery === "fundRaiser" && <NewFundraiserCard data={res} />}
+        {searchQuery === "fundRaiser" && <NewFundraiserCard {...res} />}
       </div>
     );
   });

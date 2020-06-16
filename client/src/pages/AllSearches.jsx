@@ -119,8 +119,8 @@ const AllSearches = (props) => {
                       </div>
                     </div>
 
-                    <div class="row">
-                      <div class="col">
+                    <div className="row">
+                      <div className="col">
                         <StyledLink to="search/twitter">
                           <div className=" colorB3" id="location-div">
                             <h3 className="disappear">
@@ -146,7 +146,7 @@ const AllSearches = (props) => {
                               <span>Verified</span>
                             </h3>
                             <i
-                              class="fab fa-reddit fa-5x"
+                              className="fab fa-reddit fa-5x"
                               aria-hidden="true"
                             ></i>
                             <h3>
